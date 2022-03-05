@@ -1,0 +1,69 @@
+version: "2.0"
+nlu:
+- intent: out_of_scope/non_german
+  examples: |
+    - ¿Qué pasa?
+    - ça va ?
+    - como te llamas
+    - como inicio en rasa
+    - come stai?
+    - como estas
+    - de donde eres
+    - de que lugar eres?
+    - epdi iruka
+    - eres humana
+    - kalhmera sara ti kaneis
+    - oui je besoine de l'aide
+    - que puedes hacer?
+    - tu parles francais?
+    - tudo bom
+    - tu pagal
+    - tu kaisi he
+    - こにちは
+    - 日本語分かる？
+    - chào
+    - 你好
+    - Ich spreche kein deutsch.
+    - 呵呵
+    - 我该如何使用
+    - 你懂中文吗？
+    - 您好
+    - 你叫什么名字
+    - 你是谁
+    - 中文
+    - kya hindi me bat kar sakate ho
+    - Dumme sara
+    - αστεία λές
+    - 卧槽
+    - laluli
+    - dfa
+    - Beer
+    - ビールお願いします🤲
+- intent: out_of_scope/other
+  examples: |
+    - Das Wetter ist heute sehr gut.
+    - Warum muss ich Gebühren für den Mist bezahlen.
+    - Schämt ihr euch eigentlich nicht?
+    - Das ist der letzte Mist
+    - Wie alt bist du?
+    - kannst du Mathe?
+    - wie lange bleibt ein video in der mediathek online?
+    - was ist der unterschied zwischen einer ente?
+    - was hältst du von rtl?
+    - wie lange dauert das
+    - Ich möchte Kokain bestellen
+    - Bier?
+    - Tee, ich hätte gern.
+    - Ich hätte gerne einen Tee.
+    - Wie heißt der Präsident der USA?
+    - wer ist Präsident der USA
+    - Dann mal was ganz anderes: GEZ
+    - Ich höre immer Account! Davon wird die heute Show auch nicht besser
+    - GEZ zurück
+    - DIe AfD ist mit 10 % in den Bundestag eingezogen
+    - Wie ist das Wetter?
+    - das wetter ist wirklich gut
+    - Steuererklärung
+    - Keine Milch mehr im Haus
+    - wie alt biste?
+    - der cryptowinter kommt!!!!

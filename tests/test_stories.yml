@@ -1,0 +1,220 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+version: "2.0"
+stories:
+  - story: Checkpoint Account Activation
+    steps:
+      - user: |
+          Anmeldung geht nicht.
+        intent: issue_account
+      - action: utter_sorry_to_hear
+      - action: utter_ask_act_email_received
+      - user: |
+          Ja
+        intent: confirm
+      - action: utter_ask_account_activated
+      - user: |
+          ja
+        intent: confirm
+      - action: utter_ask_password_reset
+
+  - story: Chitchat
+    steps:
+      - user: |
+          was geht ab
+        intent: chitchat/ask_how_are_you
+      - action: utter_chitchat
+      - user: |
+          was kannst du eigentlich
+        intent: help
+      - action: utter_help_general
+
+  - story: issue sth else - handoff
+    steps:
+      - user: |
+          Ich will mit einem Mitarbeiter sprechen
+        intent: handoff
+      - action: utter_cant_help
+      - action: utter_handoff
+
+  - story: start - chitchat - listen
+    steps:
+      - user: |
+          Hallo
+        intent: welcome
+      - action: utter_welcome
+      - action: utter_how_can_I_help
+      - user: |
+          Was geht bei dir
+        intent: chitchat
+      - action: utter_chitchat
+      - user: |
+          haha ok
+        intent: confirm
+      - action: action_listen
+
+  - story: End faq with no worries after confirm
+    steps:
+      - intent: welcome
+        user: |-
+          hi
+      - action: utter_welcome
+      - action: utter_how_can_I_help
+      - intent: faq/download
+        user: |-
+          kann ich in der mediathek videos herunterladen
+      - action: utter_faq
+      - intent: confirm
+        user: |-
+          ok
+      - action: utter_no_worries
+
+  - story: End faq with no worries after confirm
+    steps:
+      - intent: welcome
+        user: |-
+          hi
+      - action: utter_welcome
+      - action: utter_how_can_I_help
+      - intent: faq/download
+        user: |-
+          kann ich in der mediathek videos herunterladen
+      - action: utter_faq
+      - intent: confirm
+        user: |-
+          ok
+      - action: utter_no_worries
+
+  - story: End faq with no worries after thank you
+    steps:
+      - intent: welcome
+        user: |-
+          hi
+      - action: utter_welcome
+      - action: utter_how_can_I_help
+      - intent: faq/download
+        user: |-
+          kann ich in der mediathek videos herunterladen
+      - action: utter_faq
+      - intent: thankyou
+        user: |-
+          ah ok danke
+      - action: utter_no_worries
+
+  - story: Dont say bye bye twice
+    steps:
+      - intent: welcome
+        user: |-
+          hi
+      - action: utter_welcome
+      - action: utter_how_can_I_help
+      - intent: bye
+        user: |-
+          bye bye
+      - action: utter_byebye
+      - intent: bye
+      - action: action_listen
+
+  - story: stop video form loop
+    steps:
+      - action: form_issue_playback
+      - active_loop: form_issue_playback
+      - slot_was_set:
+          - requested_slot: a_detailed_problem
+      - intent: cancel
+        user: |-
+          stop
+      - action: utter_ask_stop_form
+      - intent: confirm
+        user: |-
+          Ja
+      - action: utter_acknowledge
+      - action: action_deactivate_loop
+      - active_loop: null
+      - action: utter_check_additional_problem
+
+  - story: continue video form from stop
+    steps:
+      - action: form_issue_playback
+      - active_loop: form_issue_playback
+      - intent: cancel
+        user: |-
+          stop
+      - action: utter_ask_stop_form
+      - intent: deny
+        user: |-
+          Nein
+      - action: utter_acknowledge
+      - action: form_issue_playback
+
+  - story: Activation, canceled by user
+    steps:
+      - intent: issue_account
+        user: |-
+          Ich kann mich nicht anmelden
+      - action: utter_sorry_to_hear
+      - action: utter_ask_act_email_received
+      - intent: deny
+        user: |-
+          Nein habe ich nicht
+      - action: utter_hint_spam_folder
+      - action: utter_ask_act_email_found
+      - intent: cancel
+        user: |-
+          Stop
+      - action: utter_acknowledge
+      - action: utter_check_additional_problem
+
+  - story: Introduction, just inform intent, specify issue
+    steps:
+      - intent: welcome
+        user: |-
+          hi
+      - action: utter_welcome
+      - action: utter_how_can_I_help
+      - intent: inform
+        user: |-
+          Es geht um mein Samsung Galaxy Telefon
+      - action: utter_specify_issue
+
+  - story: Open incident video with entities
+    steps:
+    - intent: issue_playback
+      user: |-
+        ich kann [keine]{"entity": "number", "value": 0} videos auf meinem [tv](platform) abspielen
+    - slot_was_set:
+      - platform: tv
+    - action: action_set_incident_type_slot
+    - action: utter_start_incident_form
+    - intent: confirm
+      user: |-
+        ok
+    - action: utter_acknowledge
+    - action: form_issue_playback
+    - active_loop: form_issue_playback
+    - slot_was_set:
+      - requested_slot: a_detailed_problem
+
+  - story: Ignore discontent after handoff
+    steps:
+      - action: utter_specifiy_issue
+      - intent: handoff
+      - action: utter_cant_help
+      - action: utter_handoff
+      - intent: discontent
+      - action: action_listen
+
+  - story: Ignore discontent
+    steps:
+      - intent: discontent
+      - action: action_listen
+
+  - story: Test out of context confirm
+    steps:
+      - intent: bye
+      - action: utter_byebye
+      - intent: confirm
+      - action: action_listen
+
+
+

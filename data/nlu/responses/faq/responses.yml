@@ -1,0 +1,34 @@
+version: "2.0"
+responses:
+  utter_faq/youth_check:
+    - text: |
+        **Wie funktioniert die Altersprüfung?**
+        Wenn Du älter als 16 und bestimte Sendung mit Altersbeschränkung vor 22 Uhr schauen möchtest gibt es verschiedene Voraussetzungen:
+        * Mindestalter 16 Jahre
+        *Besitz eines deutschen **Personalausweises**, **Reisepasses** oder **Aufenthaltstitels**
+        *Alternativ funktioniert die Durchführung über *Reisepässe* der Länder Österreich, Schweiz, Türkei sowie aller weiteren EU-Länder
+        *Ein (kostenloses) ZDF-Konto
+        *Prüfung der Ausweisnummer sowie das Einrichten der Jugendschutz-PIN [hier](https://www.zdf.de/mein-zdf/altersverifikation)
+
+  utter_faq/download:
+    - text: |
+        **Kann ich Videos in der Mediathek herunterladen?**
+        In den meisten ZDFmediatheks-Varianten gibt es die Möglichkeit, einzelne Videos auf das eigene Gerät herunterzuladen. Allerdings können wir diese Funktion nur bei solchen Videos anbieten, bei denen uns die Download-Rechte vorliegen.
+
+        Eine Übersicht zu downloadbaren Videos gibt es [hier](https://www.zdf.de/service-und-hilfe/videos-zum-download-100.html).
+
+  utter_faq/my_zdf:
+    - text: |
+        **Der Mein ZDF Bereich**
+        Unter Mein ZDF findest du alle Funktionen der ZDFmediathek, die persönlich auf dich zugeschnitten sind.
+
+        Mehr zu den wichtigsten Funktionen findest du [hier](https://www.zdf.de/service-und-hilfe/hilfe-anmeldung-registrierung-100.html)
+      image: https://www.zdf.de/assets/onboarding-seamless-screen-2-100~768x432?cb=1526556334468
+
+  utter_faq/program:
+    - text: |
+        Zu Programmdetails kann ich leider keine Auskunft geben aber [hier](https://www.zdf.de/live-tv) wirst du vielleicht fündig.
+
+  utter_faq/geo_blocked:
+    - text: |
+        Einige Inhalte sind leider aus lizenzrechtlichen Gründen nicht im Ausland abspielbar. Das tut uns Leid, lässt sich aber momentan nicht ändern.

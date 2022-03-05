@@ -1,0 +1,6 @@
+version: "2.0"
+
+nlu:
+  - regex: version
+    examples: |
+      - (\d+\.)?(\d+\.)?(\d+)

@@ -1,0 +1,77 @@
+version: "2.0"
+
+rules:
+  - rule: welcome first
+    conversation_start: true
+    steps:
+      - intent: welcome
+      - action: utter_welcome
+      - action: utter_how_can_I_help
+
+  - rule: welcome
+    steps:
+      - intent: welcome
+      - action: utter_greetings
+
+  - rule: out of scope
+    steps:
+      - intent: out_of_scope
+      - action: utter_out_of_scope
+
+  - rule: Ask additional problem - Deny
+    steps:
+      - action: utter_check_additional_problem
+      - intent: confirm
+      - action: utter_ask_help
+
+  - rule: Ask additional problem - Confirm
+    steps:
+      - action: utter_check_additional_problem
+      - intent: deny
+      - action: utter_byebye
+
+  - rule: Praise
+    steps:
+      - intent: praise
+      - action: utter_thank_you
+
+  - rule: Chitchat
+    steps:
+      - intent: chitchat
+      - action: utter_chitchat
+
+  - rule: Handoff
+    steps:
+      - intent: handoff
+      - action: utter_cant_help
+      - action: utter_handoff
+
+  - rule: FAQ
+    steps:
+      - intent: faq
+      - action: utter_faq
+
+  - rule: Dont say bye twice
+    steps:
+      - action: utter_byebye
+      - intent: bye
+      - action: action_listen
+
+  - rule: Cancel
+    steps:
+      - intent: cancel
+      - action: utter_acknowledge
+      - action: utter_check_additional_problem
+
+  - rule: Ignore discontent
+    steps:
+      - intent: discontent
+      - action: action_listen
+
+  - rule: Help after default fallback
+    steps:
+      - action: action_default_fallback
+      - intent: help
+      - action: utter_restart_conversation
+
+

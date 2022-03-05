@@ -1,0 +1,114 @@
+version: "2.0"
+rules:
+  - rule: start video form
+    steps:
+      - action: utter_start_incident_form
+      - intent: confirm
+      - action: utter_acknowledge
+      - action: form_issue_playback
+      - active_loop: form_issue_playback
+
+  - rule: do not start video form
+    steps:
+      - action: utter_start_incident_form
+      - intent: deny
+      - action: utter_acknowledge
+      - action: utter_handoff
+      - action: utter_check_additional_problem
+
+  - rule: explain video slots
+    condition:
+      - active_loop: form_issue_playback
+    steps:
+      - intent: explain
+      - action: action_explain_requested_slot
+      - action: utter_ask_continue
+
+  - rule: help video slot
+    condition:
+      - active_loop: form_issue_playback
+    steps:
+      - intent: help
+      - action: action_help_fill_requested_slot
+      - action: utter_ask_continue
+
+  - rule: stop form
+    condition:
+      - active_loop: form_issue_playback
+    steps:
+      - or:
+          - intent: cancel
+      - action: utter_ask_stop_form
+
+  - rule: stop, stop form
+    condition:
+      - active_loop: form_issue_playback
+    steps:
+      - action: utter_ask_stop_form
+      - intent: confirm
+      - action: utter_acknowledge
+      - action: action_deactivate_loop
+      - active_loop: null
+      - action: utter_check_additional_problem
+
+  - rule: stop, continue form
+    condition:
+      - active_loop: form_issue_playback
+    steps:
+      - action: utter_ask_stop_form
+      - intent: deny
+      - action: utter_acknowledge
+      - action: form_issue_playback
+      - active_loop: null
+    wait_for_user_input: false
+
+  - rule: continue video form
+    condition:
+      - active_loop: form_issue_playback
+    steps:
+      - action: utter_ask_continue
+      - or:
+          - intent: confirm
+          - intent: inform
+      - action: utter_acknowledge
+      - action: form_issue_playback
+      - active_loop: null
+    wait_for_user_input: false
+
+  - rule: do not continue video form
+    condition:
+      - active_loop: form_issue_playback
+    steps:
+      - action: utter_ask_continue
+      - or:
+          - intent: deny
+          - intent: cancel
+      - action: utter_acknowledge
+      - action: action_deactivate_loop
+      - active_loop: null
+      - action: utter_check_additional_problem
+
+  - rule: submit video form
+    condition:
+      - active_loop: form_issue_playback
+    steps:
+      - action: form_issue_playback
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: utter_ask_submit
+      - or:
+          - intent: confirm
+          - intent: thankyou
+          - intent: deny
+          - intent: cancel
+      - action: submit_incident
+      - action: utter_check_additional_problem
+
+  - rule: chitchat in video form
+    condition:
+      - active_loop: form_issue_playback
+    steps:
+      - intent: chitchat
+      - action: utter_chitchat
+      - action: utter_ask_continue

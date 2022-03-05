@@ -1,0 +1,280 @@
+version: "2.0"
+nlu:
+- intent: issue_stream_interruptions
+  examples: |
+    - Die Videos ruckeln die ganze Zeit
+    - Mein Bild friert ständig ein
+    - Der Stream über [Chromecast]{"entity": "platform", "value": "cast"} bricht sehr häufig ab
+    - Die Videoqualität ist schlimmer als SD. Permanent stockt es und unscharfe Bild.
+    - Ich habe das Problem, dass die Videos bei mir ruckeln
+    - Nachdem ich die App ganz normal gestartet habe und auf ein Video klicke buffert er die ganze Zeit
+    - [Livestreams](video_content_type) in [hoher Videoqualität]{"entity": "quality", "value": "high"} stottern bei mir nur.
+    - Mein Video ruckelt häufiger. Das betrifft [VOD](video_content_type) und [Livestream]{"entity": "video_content_type", "value": "live"}
+    - Viel Ruckeln bei schlechter [Auflösung](quality).
+    - Oft und gern genutzt, bermerke ich in den letzten Wochen sehr oft, dass sich der [Livestream]{"entity": "video_content_type", "value": "live"} aufhängt oder auch extrem zeitversetzt im Vergleich zu Satelliten- und Kabelempfang läuft.
+    - [Film](video_content_type) die Hexenprinzessin bricht am ende ab
+    - Gute Sache, aber mit bricht öfters trotz gutem Empfang der [Film](video_content_type) weg.
+    - Trotz schnellem Internet dauert es lange ehe der [Film](video_content_type) geladen ist und beim Schauen gibt's Unterbrechungen.
+    - Trotz guter Internetverbindung bleibt der [Film](video_content_type) stehen und es kommt nur noch das Verbindungsaufbau Symbol.
+    - Leider habe ich den Eindruck, dass die App immer schlechter wird. Ich nutze sie auf dem [Smartphone](platform). Die Übertragung stockt häufig, egal ob im [Livestream](video_content_type) oder aus der Mediathek. Oft werden Inhalte nicht gefunden oder können nicht geladen werden. Das passiert sogar mitten im [Film](video_content_type).
+    - wenn man einen [Film](video_content_type) mehr als zweimal stoppt, bricht der [Film](video_content_type) ab...
+    - Was auch sehr stört ist das alle paar Minuten der [Film](video_content_type) einfach stoppt, ist sehr lästig.
+    - Seit letztem Jahr ruckelt und hakt jeder Stream trotz bestem Internet.
+    - Mindestens jede 3. Sekunde Standbild und es dauert mehr als eine halbe Minute, bis es dann weiterläuft... Bei einer sehr stabilen Internetverbindung!!
+    - Im vergleich zur ard app einfach nur ein trauerspiel, über [chromecast]{"entity": "platform", "value": "cast"} ruckelt der [livestream](video_content_type) und bricht ständig ab
+    - Der [livestream](video_content_type) läuft seit 10 Jahren nicht stabil.
+    - [Livestreams](video_content_type) der EM bleiben nach einer Zeit einfach stehen und buffern irgendwas. Es geht dann garnicht mehr weiter ohne die App neuzustarten.
+    - Streams brechen oft mittendrin ab und müssen dann neu gestartet werden.
+    - Bricht nach ein paar sec jedes mal ab und hängt. Internetverbindung ist aber einwandfrei.
+    - Leider wird seit dem Update der [Livestream](video_content_type) ständig abgebrochen.
+    - Ständige Fehler und Abbrüche beim Streamen über den [Chromecast](platform)
+    - [Livestream](video_content_type) kackt ab
+    - Das Puffern funktioniert auch nicht! Dauernd Abbrüche.
+    - alle paar Sekunden stoppt das [Video](video_content_type), da neu gepuffert werden muss.
+    - Streamen auf dem [Chromecast]{"entity": "platform", "value": "cast"} laggt
+    - Immer wieder ständige kurze Ruckler auf [Android](os_name) [tv](platform). Egal ob ich die App mit 23,97hz 25hz 50hz oder 60hz starte. Einfach immer wieder Microrucker
+    - Ein dauerhaftes streaming trotz guter Verbindung (60 mbit) ist immer noch nicht möglich. Das ist echt traurig!
+    - Bild friert ständig ein trotz schnellem und stabilen Internetzugang
+    - unbrauchbar, Stream bricht nach 2 Sekunden ab. Jedes Mal.
+    - Geht da auch mal ein Stream ohne untetbrechung?!
+    - "Ein Fehler ist aufgetreten" - Alle 5 min im [Lifestream](video_content_type). Mit Twitch habe ich nie Probleme.
+    - Der letzte Mist. Ruckelt, Ton verzögert.
+    - [Livestream](video_content_type) startet, wenn überhaupt, erst nach minutenlangem Warten und hängt dann alle paar Sekunden. Trotz 200Mbits. Absolut unbrauchbar schon seit Wochen.
+    - Müll App. Der [livestream](video_content_type) hängt sich ständig auf
+    - Beim Player stoppt die Anzeige jedes Mal automatisch, sodass man nicht normal etwas schauen kann! Extrem nervig... Bitte beheben. ([P30 Pro](model_name))
+    - Erst einmal gibt es ein völlig pixeliges Bild. Dann friert nach spätestens 4 Minuten das Bild ein, kurze Zeit später bricht die App ab und lässt die WM- [Live](video_content_type) Streams nicht mehr starten (Dauerwartekreisel).
+    - Livestream ist einfach nur schlecht, mit vielen Unterbrechungen.
+    - Der [Lievestream](video_content_type) bricht regelmäßig ab "es ist ein Fehler aufgetreten"
+    - Stream stürtst alle 30 sekunden ab trotz sehr gutem Internet, Bildqualität lässt auch zu wünsen übrig.
+    - Seit vorgestern hängt sich der [Livestream](video_content_type) und manche Videos in unregelmäßigen Abständen auf. Den Cache habe ich geleert, hat nix geholfen. De- und Neuinstallation bringen ebenso wenig.
+    - der stream hängt und springt manchmal minuten zurück, welche noob firma hatn das implementiert ?
+    - Videos haken ständig
+    - Trotz guter Internetverbindung bleibt der [Film](video_content_type) stehen und es kommt nur noch das Verbindungsaufbau Symbol..
+    - Die Videos sind dauern am buffern und an meinem Internet liegt es definitiv nicht
+    - Bild bleibt ständig stehen, was definitiv nicht an meinem Internet liegt. Mit Streams bei der Konkurrenz habe ich nie Probleme!
+    - App/ [Livestream](video_content_type) stockt immer wieder, auch bei sehr gutem Internet
+    - Ich habe die Mediathek auf meinem [Handy]{"entity": "platform", "value": "phone"} gestartet und wollte dann den Tator von heute schauen. Dabei hat das [Video](video_content_type) zuerst geruckelt und ging dann gar nicht mehr. Ich schaue die [Videos](video_content_type) immer zuhause über [wifi](connectivity).
+    - Nach wenigen Sekunden des Abspielens hängt sich der [Film](video_content_type) auf, nudelt minutenlang eingefroren um dann weiter zu machen, um sich nur wenige Sekunden später erneut aufzuhängen. Am Standort liegt es nicht, denn [Filme](video_content_type) der ARD Mediathek lassen sich unterbrechungsfrei abspielen. Habe [Samsung](vendor) [Galaxy Note 10 Plus](model_name) mit letzter Firmware.
+    - Auf meinem [Android](os_name) [TV](platform) nicht brauchbar. Trotz stabiler Internet Verbindung von 50 mbits hackt und ruckelt die Wiedergabe von [Videos](video_content_type) und [Sendungen](video_content_type) extrem.
+    - Das [Video](video_content_type) ruckelt beim Abspielen
+    - Im [Browser](platform) buffern die [Live](video_content_type) immer ewig.
+    - Ich will nicht, dass der Stream abbricht
+    - Wenn ich gucke, bricht der Stream mit einem Mal ab
+    - Das [Video](video_content_type) soll nicht stocken
+    - [Stream](video_content_type) bricht ab
+    - [Video](video_content_type) stockt
+    - Das [Video](video_content_type) ruckelt beim abspielen
+    - Mein Stream bricht die ganze Zeit ab
+    - Katastrophe, hängt laufend.
+    - Es kommt die ganze Zeit zu Abbrüchen beim [Streaming](video_content_type)
+    - Immer wenn ich versuche [Videos](video_content_type) abzuspielen brechen die immer ab
+    - Ich sehe sehr oft einen orangenen Ladebalken
+    - Beim Playback bekomme ich die ganze Zeit den Ladebalken zu sehen.
+    - Das [Video]{"entity": "video_content_type", "value": "vod"} ist ganz komisch am ruckeln und rote Schlieren azeigen
+    - Ich seh die ganze Zeit einen orangen Ladebalken ich glaube das soll nicht so
+    - In dem [Video]{"entity": "video_content_type", "value": "vod"} das ich anschauen wollte ruckelt es nur
+    - Das Video spielt normal ab, nach ca. einer Minute bleibt es hängen. Standbild und kein Ton
+    - wiedergabe bleibt hängen
+    - Das [Video]{"entity": "video_content_type", "value": "vod"} hängt
+    - Am Anfang wurde kein Ton abgespielt und das [Video]{"entity": "video_content_type", "value": "vod"} hat geruckelt
+    - Das Video ruckelt, und die die Seite zeigt manchmal nicht alles an.
+    - Beim ansehen eines [Videos]{"entity": "video_content_type", "value": "vod"} startet dieses in der Mitte, läuft einige Zeit & bleibt dann ständig stehen.
+    - ich habe meine merkliste geöffnet, auf das gemerkte [video]{"entity": "video_content_type", "value": "vod"} geklickt und wollte es mir ansehen. nach ca. 30 sekunden fängt es an zu ruckeln
+    - ich versuche auf meinem [samsung](vendor) [galaxy s3](model_name) das video "gefährlicher wintereinbruch" abzuspielen und es ruckelt wie sau
+    - ich spiele ein video aus meiner merkliste ab und es stockt wie sau
+    - hallo, mein [video]{"entity": "video_content_type", "value": "vod"} stockt
+    - Ich hab gerade ein Video geschaut und das hat gar nicht gut funktioniert. Es kam die ganze Zeit zu rucklern
+- intent: issue_synchronization
+  examples: |
+    - Audio im [Video](video_content_type) ist asynchron
+    - Beim [Livestream](video_content_type) laufen Bild und Tun nicht mehr synchron
+    - Auf dem [Chromecast]{"entity": "platform", "value": "cast"} laufen Ton und Bild nciht synchron im [Live-TV](video_content_type) Modus
+    - Seit Monaten ist leider Bild und Ton, vorallem bei dem [Livestream](video_content_type), asynchron
+    - Auf [Chromecast]{"entity": "platform", "value": "cast"} immer wieder Fehler. Sound und Bild sind auch versetzt.
+    - der [Lievestream](video_content_type) bricht regelmäßig ab "es ist ein Fehler aufgetreten" außerdem ist Bild und Ton nicht synchron
+    - Seit kurzen sind Bild und Ton asynchron
+    - Bild und Ton laufen im [Live-Streaming](video_content_type) asynchron mit dem Chromcast-Player.
+    - Ton und Bild sind über [Chromecast]{"entity": "platform", "value": "cast"} nicht synchron.
+    - Bild ist im [Chromecast]{"entity": "platform", "value": "cast"} nicht synchron zum Ton
+    - Der Ton ist permanent früher als das Bild, sodass man den Kommentartor Tor schreien hört, aber der Spieler noch nicht mal geschossen hat.
+    - Leider unbrauchbar mit [Chromecast]{"entity": "platform", "value": "cast"}. Ton ca. 3-5 Sekunden vor dem Bild.
+    - An sich eine gute App, aber seit einigen Tagen ist es nicht mehr möglich Bild und Ton SYNCHRON zu empfangen. Sehr Schade, bei der ARD gibt es dieses Problem nicht...
+    - Ton und Bild mehrere Sekunden auseinander beim streamen mit dem [Chromecast]{"entity": "platform", "value": "cast"}
+    - Der Ton ist immer verschoben, vor allem beim Fußball
+    - Über [Google-Chromecast]{"entity": "platform", "value": "cast"} extreme Verzögerung zwischen Ton und Bild. So nicht verwendbar.
+    - Beim streamen mit [chromecast]{"entity": "platform", "value": "cast"} völlig unbrauchbar.
+    - Ton eilt bei Nutzung v. [Chromecast]{"entity": "platform", "value": "cast"} voraus. Ist gerade suboptimal bei ENG-DEN.
+    - [Chromecast]{"entity": "platform", "value": "cast"} Wiedergabe crasht ab und zu, Bild und Ton sind dauerhaft asynchron.
+    - das [Live-TV](video_content_type) Streaming über einen [Chromecast]{"entity": "platform", "value": "cast"} ist qualitativ wirklich sehr schlecht. Ton und Bild sind permanent zeitversetzt und die Bildqualität schwankt enorm.
+    - Bild und Ton laufen permanent asynchron.
+    - Bei sämtliche Livestreams der EM stimmte die Tonspur nicht mit den Mundbewegungen überein. Synchronisation sehr schlecht.
+    - Im Stream auf der [Chromecast]{"entity": "platform", "value": "cast"} eilt der Ton dem Bild einige Sekunden voraus.
+    - Bild und Ton NICHT synchron über [Chromecast]{"entity": "platform", "value": "cast"}!
+    - Ich streame über den [chromecast]{"entity": "platform", "value": "cast"}. Leider passt beim [livestream](video_content_type) Bild und Ton nicht zusammen. Das macht das zuschauen sehr anstrengend.
+    - Auf [Chromecast]{"entity": "platform", "value": "cast"} 3 zuletzt alles in Ordnung, seit einigen Tagen sind Audio und Video aber wieder häufig nicht in Sync. Somit kaum benutzbar.
+    - Auf dem [Chromecast]{"entity": "platform", "value": "cast"} laufen Ton und Bild nicht synchron im [Live-TV](video_content_type) Modus.
+    - Beim casten auf einen [chromecast]{"entity": "platform", "value": "cast"} ist die Audiospur im [livestream](video_content_type) fast immer asynchron
+    - Ich starte ein Video in der Mediathek und es kommt kein Ton
+    - Das [Video]{"entity": "video_content_type", "value": "vod"} war nicht richtig synchronisiert
+    - Bei dem [Video]{"entity": "video_content_type", "value": "vod"} dass ich gesehen hab war der Ton und Bild irgendwie versetzt
+    - Ich hab hier ein [Video]{"entity": "video_content_type", "value": "vod"} zum Wintereinbruch angesehen und da war etwas komisch mit der Stimme der Frau
+    - Beim Abspielen des [Videos]{"entity": "video_content_type", "value": "vod"} setzt der Ton erst ein paar Sekunden verzögert ein
+    - Ton setzt verzögert ein
+    - ton funktioniert nicht zuverlässig
+    - Wenn ich das [Video]{"entity": "video_content_type", "value": "vod"} anklicke, wird das [Video]{"entity": "video_content_type", "value": "vod"} im [Video]{"entity": "video_content_type", "value": "vod"} abgespielt, allerdings hört man keinen Ton. Dieser erscheint erst mitten im [Video]{"entity": "video_content_type", "value": "vod"}. Außerdem passt das Bildmaterial nicht ganz zum Ton.
+    - Der Ton des [Videos]{"entity": "video_content_type", "value": "vod"} schaltet sich erst sehr spät ein
+    - Der Ton stimmt nicht
+    - Wenn ich ein Video gucke sind Bild und Ton nicht synchron. Der Ton kommt, bevor das passende Bild erscheint.
+    - Videobild und Ton sind defekt
+    - Ich habe die App gestartet und das Video geöffnet. Es hat kurz gebuffert und das Bild ging los. Es war verpixelt und der Ton hat erst gut 10 Sekunden nach dem Bild eingesetzt. Ton und Bild verliefen asynchron.
+    - Der Ton hängt auch
+    - Der Ton knarzt..
+    - Kein Ton beim Starten des [Videos]{"entity": "video_content_type", "value": "vod"}
+- intent: issue_playback
+  examples: |
+    - Ich hab nur Probleme mit meinen [Videos](video_content_type)
+    - Dauerhaftes Streaming trotz guter Verbindung ist nicht möglich
+    - Die App funktioniert weder im Multifonester noch im Overlay. Der Stream läuft im Hintergrund weiter
+    - Leider ist seit längerem bei Wiedergabe via [Chromecast]{"entity": "platform", "value": "cast"} der Ton nicht mit dem Bild synchron.
+    - Alle 5 min im [Lifestream](video_content_type) bekomme ich "Ein Fehler ist aufgetreten"
+    - Bei mir ist immer, wenn ich auf dem [Fernsher](platform) [Live TV](video_content_type) stream eine 3-4sekündige Verzögerung des Tons vorhanden.
+    - Die App ruckelt und der Ton ist verzögert.
+    - Wenn man auf dem [Fernseher](platform) streamen will denn delayed das so hart.
+    - [Livestream](video_content_type) funktoniert leider nie wirklich gut. Entweder ist die Bildqualität sehr beschieden, der Stream bricth relativ häufig ab oder die Tonsupr ist versetzt.
+    - Egal ob [WLAN](connectivity) oder [LTE](connectivity), Ton hängt IMMER 3 Sekunden hinter dme Bild.
+    - Bei [Chromecast]{"entity": "platform", "value": "cast"} tritt dauern "ein Fehler auf"
+    - Katastrophale Verbindung zu [Chromecast]{"entity": "platform", "value": "cast"}
+    - Ich habe ein Problem bei der Videowiedergabe
+    - Ich habe Probleme beim Abspielen von Videos
+    - Ich starte zuerst die App und dann geh ich auf die Sendungsseite. Eigentlich sollte dann der Titel starten, dass passiert aber nicht.
+    - Auf meinem [Tablet](platform) dauert es immer ewig bis die Videos starten und das obwol ich im [WiFi](connectivity) bin
+    - Wenn ich [Video]{"entity": "video_content_type", "value": "vod"} über [WLAN](connectivity) abspiele ist der Bildschirm immer nur schwarz.
+    - Alle Streams ruckeln auf allen plattformen.
+    - Wenn ich versuche auf meinem [model_entity](model_name) 5 ein Video abzuspielen, dann buffert es immer ewig und dann ist der Bildschirm schwarz
+    - Wenn ich ein Video versuche auf meinem [Android]{"entity": "os_name", "group": "os"} [TV](platform) abzuspielen, funktioniert keiner der [Livestreams](video_content_type). Am Internet kann es nicht liegen weil ich mit [LAN](connectivity) dranhänge
+    - Wenn ich [Video]{"entity": "video_content_type", "value": "vod"} in [niedriger Qualität]{"entity": "quality", "value": "low"} abspiele klappt das nie
+    - Meine [Videos]{"entity": "video_content_type", "value": "vod"} in [hoher Qualität]{"entity": "quality", "value": "high"} funktionieren nicht
+    - [Videos]{"entity": "video_content_type", "value": "vod"} in [mittlerer Auflösung]{"entity": "quality", "value": "low"} spielen nie ab
+    - Also immer wenn ich in der App ein Video versuche abzuspielen geht das überhaupt nicht
+    - Ich kann keine [Videos]{"entity": "video_content_type", "value": "vod"} auf meinem [vendor_entity](vendor) [Galaxy](model_name) abspielen
+    - ich hab ein problem bei der wiedergabe von [Videos]{"entity": "video_content_type", "value": "vod"}
+    - Ich kann keine [Videos]{"entity": "video_content_type", "value": "vod"} abspielen
+    - Ich kann keine [Videos]{"entity": "video_content_type", "value": "vod"} auf meinem [Samsung](vendor) [Galaxy S9](model_name) abspielen
+    - Ich habe ein Problem mit Videoplayback
+    - Ich kann keine heruntergeladenen [Videos]{"entity": "video_content_type", "value": "vod"} abspielen
+    - Das videoplayback bricht ab
+    - die verbindung zum [chromecast]{"entity": "platform", "value": "cast"} bricht ab
+    - mein [chromecast]{"entity": "platform", "value": "cast"} geht nicht
+    - ich hab ein problem mit den [Videos]{"entity": "video_content_type", "value": "vod"}
+    - Ich hab Problem mit den Vidoes
+    - [Videos]{"entity": "video_content_type", "value": "vod"} spielen nicht auf [iphone](model_name)
+    - [Videos]{"entity": "video_content_type", "value": "vod"} laufen nicht auf [iPhone 7](model_name)
+    - [Video]{"entity": "video_content_type", "value": "vod"} startet nie
+    - [Video]{"entity": "video_content_type", "value": "vod"} spielt nicht ab
+    - [Video]{"entity": "video_content_type", "value": "vod"} startet nicht
+    - Playback auf [Live](video_content_type) funktioniert nicht
+    - Mein [Live TV](video_content_type) funktionieren nicht
+    - Ich kann keine [Videos]{"entity": "video_content_type", "value": "vod"} auf meinem [Samsung](vendor) [Galaxy](model_name) abspielen
+    - [Video]{"entity": "video_content_type", "value": "vod"} bleibt immer hängen, ich kann nicht streamen
+    - Mein [Video]{"entity": "video_content_type", "value": "vod"} spielt nicht ab
+    - Das [Video]{"entity": "video_content_type", "value": "vod"} hängt nach 1 Sek
+    - Meine [Videos]{"entity": "video_content_type", "value": "vod"} gehen nicht
+    - Das [Video]{"entity": "video_content_type", "value": "vod"} soll störungsfrei durchlaufen. Ohne Ruckeln
+    - [Videos]{"entity": "video_content_type", "value": "vod"} laufen nicht auf [iphone](model_name)
+    - [Videos]{"entity": "video_content_type", "value": "vod"} spielen nicht auf meinem [Tv](platform).
+    - Das [Video]{"entity": "video_content_type", "value": "vod"} bleibt einfach schwarz nachdem die Seite geöffnet wird.
+    - [Videos]{"entity": "video_content_type", "value": "vod"} die ich heruntergeladen habe lassen sich nicht starten
+    - Meine heruntergeladenen [Videos]{"entity": "video_content_type", "value": "vod"} starten nicht
+    - Gerät in die [Hand](platform) nehmen, zack, Bild ist schwarz.
+    - Seit Neuestem ruckelt die Wiedergabe wie bei einem schlechten 1920er Jahre Film. An unserem [WLAN](connectivity) (100.000) liegt es nicht. Die Konkurrenz läuft auch problemlos.
+    - Mein [Live TV]{"entity": "video_content_type", "value": "live"} funktionieren nicht.
+    - Man kann sich keinen [Film](video_content_type) ansehen
+    - Ich hätte gerne durchgehend ein scharfes Bild
+    - Beim Abspielen von [Videos](video_content_type) wird das Bild immer wieder mal unscharf
+    - Bild wird unscharf
+    - [Videos](video_content_type) werden nicht abgespielt
+    - [Video](video_content_type) lässt sich nicht abspielen
+    - Das [Video](video_content_type) in der Mediathek gesucht und abgespielt
+    - Das Bild soll nicht immer schwarz sein
+    - Das Bild ist immer schwarz
+    - [Video](video_content_type) geht nicht.
+    - Man kann nicht Streamen. Super sch...... Vom Kunden aus denken
+    - [Live](video_content_type) läuft nicht
+    - [LiveTV](video_content_type) geht nicht
+    - Läuft bei mir auch auf [ChromeCast]{"entity": "platform", "value": "cast"} bescheiden... Noch nie sowas beim streamen erlebt.
+    - App gestartet, zu High Flyers, 1. Folge gestartet, 2 Minute geguckt, dann plötzlich friert das Bild ein und wird kurze Zeit später schwarz
+    - Ich kann keine [Videos](video_content_type) schauen
+    - meine [videos](video_content_type) spielen immer noch nicht ab
+    - Meine [videos](video_content_type) spielen nicht ab
+    - Die [Videos](video_content_type) sind nicht in [HD](quality)
+    - Ich würde gern [Videos](video_content_type) in [HD](quality) gucken
+    - Hab ich doch schon gesagt: ich kann keine 4K und [HDR](quality) Streams abspielen. Werden diese etwa einfach nicht unterstützt?
+    - Ich kann [Filme]{"entity": "video_content_type", "value": "vod"} nicht in 4K wiedergeben!
+    - Wenn ich den Abspielknopf drücke, dann erscheint der Ladebildschirm, aber das [Video](video_content_type) spielt nie ab.
+    - Hallo, das [Video](video_content_type) funktioniert nicht.
+    - Hallo, das [Video](video_content_type) lädt nicht ordentlich.
+    - Hallo, der Ton funktioniert nicht ordentlich.
+    - Hey, der Sound funktioniert nicht ordentlich.
+    - [Livestream]{"entity": "video_content_type", "value": "live"} starten führt zu einem schwarzen Bildschirm
+    - der [livestream]{"entity": "video_content_type", "value": "live"} startet nicht
+    - Keine Videos in der gesamten App spielen ab
+    - Videos spielen nicht ab
+    - Fernsehgarten spielt nicht ab
+    - Der Fernsehgarten will nicht abspielen
+    - Ich kann keine [UHD](quality) Streams in der Mediathek finden
+    - Moin! Ich kann bisher keine Inhalte in 4K bzw. HDR abspielen, obwohl meine Hardware dies unterstützt. Werden die Streams etwas nicht vom ZDF unterstützt?
+    - Das Video spielt nicht so wirklich richtig ab
+    - Das Video funktioniert erst gut und dann kommen so rote Schlieren
+    - Das Video hat ganz viele Artefakte
+    - Ich wollte ein [Video]{"entity": "video_content_type", "value": "vod"} anschauen und das hat nicht funktioniert
+    - Ich hab hier ein Video angeschaut da war im Endeffekt alles rot
+    - Ich hab mir hier gerade ein Video angeschaut das hat nicht so gut funktioniert
+    - Ich habe Probleme bei meiner Videowiedergabe
+    - Ich kann die [Sendung](video_content_type) mit der Maus nicht anschauen.
+    - Ich kann die [Sendung](video_content_type) nicht anschauen
+    - Ich kann seit gestern keine [Videos]{"entity": "video_content_type", "value": "vod"} mehr abspielen
+    - Jedesmal wenn ich die App starte und ein [Video](video_content_type) abspiele ist der Screen schwarz
+    - [Fernseher]{"entity": "platform", "value": "tv"} an, [fireTV](platform) Stick an, App gestartet, [Stream](video_content_type) gestartet, Mirror-Symbol gedrückt, kommt  nichts an
+    - Dass sich die App problemlos auf den [Fernseher]{"entity": "platform", "value": "tv"} spiegeln lässt
+    - Ich möchte den Stream sehen!
+    - Ich sehe nur einen schwarzen Bildschirm.
+    - Ich will meine Serie weitergucken!!!
+    - Das [Video]{"entity": "video_content_type", "value": "vod"} zeigt irgendwie nur rot a n
+    - das [Video]{"entity": "video_content_type", "value": "vod"} wird nicht geladen, zunächst nur startbild und dann verzerrtes Bild, auch Ton fehlt
+    - [video]{"entity": "video_content_type", "value": "vod"} lädt nicht
+    - [Video]{"entity": "video_content_type", "value": "vod"} spielt nicht von Anfang an ab, sonst setzt später ein
+    - [Video]{"entity": "video_content_type", "value": "vod"} startet verspätet
+    - Ich bekomme Videoartefacte beim abspielen
+    - Mein Videoplayer läuft nicht mehr korrekt
+    - Es spielt kein [Video]{"entity": "video_content_type", "value": "vod"}
+    - Kein Bild erkennbar, nur schräg verzogene Pixel
+    - Ich habe ziemlich viele verzogene Pixel im Bild
+    - Die Pixel sind total verschwommen
+    - Pixel erkennbar ohne Ende
+    - Ich habe Probleme auf meinem [Google](vendor) [Pixel](model_name)
+    - Ich wollte mir News anschauen zum gefährlichen Wettereinbruch. Leider wird nicht von Beginn an gestreamt.
+    - Mediathek [Video]{"entity": "video_content_type", "value": "vod"} defekt
+    - Zdf Nachrichten Wintereinbruch spielt nicht von Anfang an
+    - Das angesehene Video war defekt in der Bilddarstellung und hatte keinen Ton
+    - Ich hab ein problem mit [videos]{"entity": "video_content_type", "value": "vod"}
+- intent: issue_offline
+  examples: |
+    - Ich kann die [Videos](video_content_type) irgendwie nicht runterladen
+    - Runterladen funktioniert nicht wie angegeben .
+    - Wenn ich ein [Video](video_content_type) offline schauen will und es gerade downloadet steht da mach ein paar minuten immer download fehlgeschlagen und somit kann ich kein [Videos](video_content_type) mehr offline schauen.
+    - Das Herunterladen von [Filmen](video_content_type) funktioniert nicht.
+    - Offline scheitert, Background scheitert Leider! Damit für mich wertlos für unterwegs
+    - Seit kurzem Funktioniert der Download nicht mehr. Das war immer der Grund schlecht hin dies App Jeden Tag zu nutzen.
+    - Videos werden gar nicht abgespielt auch nicht wenn man sie vorher runterläd.
+    - Bis zum Update war alles ok. Jetzt nachdem ich das Update heruntergeladen habe habe ich Probleme wenn ich etwas downloaden möchte.
+    - Hätte erwartet dass heruntergeladene [Videos](video_content_type) ganz normal abgespielt werden können
+    - Es gibt bei mir problem für heruntergeladenen Videos
+    - Ich kann keine [Video](video_content_type) herunterladen
+    - Das Herunteleraden funktioniert nicht
+    - Download scheitert die ganze Zeit
+    - Herunterladen geht nicht
+    - Kann kein einziges [Video](video_content_type) downloaded
+- synonym: low
+  examples: |
+    - niedriger Qualität
+    - mittlerer Auflösung

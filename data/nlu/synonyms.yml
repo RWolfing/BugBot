@@ -1,0 +1,75 @@
+version: "2.0"
+nlu:
+- synonym: wlan
+  examples: |
+    - wifi
+    - WLAN
+    - Wlan
+    - wi-fi
+    - wireless
+    - Wi-Fi
+    - WiFi
+- synonym: cellular
+  examples: |
+    - mobile
+    - Mobile
+    - LTE
+- synonym: phone
+  examples: |
+    - Telefon
+    - Handy
+    - Mobilgerät
+    - Smartphone
+- synonym: tablet
+  examples: |
+    - tablett
+- synonym: web
+  examples: |
+    - Browser
+    - Desktop
+    - Computer
+    - laptop
+    - notebook
+- synonym: tv
+  examples: |
+    - TV
+    - Fernseher
+    - Fernsehgerät
+    - television
+    - Tele
+    - Fehrnseher
+    - Fehrnsehgerät
+    - fernsehn
+    - fernseher
+    - Fernsher
+    - TB
+- synonym: vod
+  examples: |
+    - Film
+    - Sendungen
+    - Videos
+    - Filme
+    - Video
+    - VOD
+- synonym: live
+  examples: |
+    - livestream
+    - Live TV
+    - Livestreams
+    - Livestream
+    - LiveTv
+    - livetv
+- synonym: low
+  examples: |
+    - niedriger Qualität
+    - mittlerer Auflösung
+- synonym: high
+  examples: |
+    - 4k
+    - UHD
+    - hoher Videoqualität
+    - hoher Qualität
+
+
+
+

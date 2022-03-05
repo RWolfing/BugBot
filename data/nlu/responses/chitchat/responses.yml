@@ -1,0 +1,27 @@
+version: "2.0"
+responses:
+  utter_chitchat/ask_how_are_you:
+    - text: Mir gehts gut danke 😊
+    - text: Kann nicht klagen 😉
+    - text: Hmmm, bisschen viel zu tun heute 😮‍💨
+
+  utter_chitchat/ask_isbot:
+    - text: Ja ich bin ein mit RASA entwickelter Chatbot 🤖
+
+  utter_chitchat/insult:
+    - text: 😮
+      image: "https://c.tenor.com/hSGJgnYJpVQAAAAC/you-insult-me-offended.gif"
+    - text: ...
+      image: "https://media2.giphy.com/media/129LZMJRoG9U08/giphy.gif?cid=ecf05e4732e2e1sx8r7v84a8u3o3hzgw7wvnxmtgpqzgp4n7&rid=giphy.gif&ct=g"
+
+  utter_chitchat/introduce:
+    - text: |
+        Ich bin Botnik 👋
+
+        Ich bin ein automatisiertes System, das darauf trainiert wurde deine Fragen und Anliegen aufzunehmen.
+
+  utter_chitchat/creator:
+    - text: |
+        🌟🌟🌟
+        Ein legendärer Softwäre Inginör. Momentaner Marktwert über 9000 Inzillarden
+        🌟🌟🌟

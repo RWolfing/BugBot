@@ -1,0 +1,118 @@
+version: "2.0"
+responses:
+  utter_welcome:
+    - text: Willkommen zum technischen Support der ZDF Mediathek.
+  utter_greetings:
+    - text: Hi 👋
+    - text: Hallo
+    - text: Willkommen 👋
+  utter_how_can_I_help:
+    - text: |
+        Wie kann ich dir helfen?
+  utter_incident_submit_success:
+    - text: |
+        Super 👍. Ich habe den vollständigen Bericht gerade zur Analyse an unsere Technik geschickt.
+
+        Danke für deine Unterstützung 🙌
+  utter_general_error:
+    - text: Uh oh... Ein Fehler, da wurden wohl meine Neuronen falsch verkabelt... 🤖
+  utter_default:
+    - text: |
+        Ich glaube hier bin ich am Ende mit meinem Latein. Vielleicht startest du die Konversation am besten nochmals neu.
+
+        Denke daran, dass ich dir nur zu Anliegen im Bereich Streaming helfen kann.
+  utter_ask_rephrase:
+    - text: |
+        Hm, sorry damit kann ich leider nichts anfangen 🤪
+
+        Kannst du die letzte Nachricht anders formulieren?
+    - text: Das verstehe ich nicht... Vielleicht hilft eine andere Formulierung?
+  utter_hint_spam_folder:
+    - text: |
+        Hmmm...
+
+        Oft landen Bestätigungsmails im Spamfolder. Könntest du für mich kurz schauen, ob du die E-Mail dort findest?
+  utter_check_action_confirmed:
+    - text: War mein letzter Ratschlag hilfreich?
+  utter_sorry_to_hear:
+    - text: Das tut mir leid 😕
+    - text: Oh nein 😕
+  utter_acknowledge:
+    - text: In Ordnung 👍
+    - text: Verstanden 🤖
+    - text: Alles klar
+    - text: Ok
+  utter_byebye:
+    - text: Es war mir eine Ehre und bis bald! ✌️
+  utter_action_password_reset:
+    - text: |
+        Auch wenn es ein bisschen Arbeit ist: Könntest du einmal bitte dein Passwort zurücksetzen? 🙏
+
+        Manchmal ist es doch ein Tippfehler...
+  utter_hint_new_account:
+    - text: |
+        Hmmm.... In diesem Fall ist die wahrscheinlich einfachste Lösung einen neuen Account zu erstellen.
+
+        Achte auf mögliche Tippfehler bei deiner E-Mail-Adresse!
+  utter_hint_account_needs_acc:
+    - text: Damit deine Registrierung erfolgreich abgeschlossen ist, muss der Account über den Bestätigungslink aktiviert werden. Ohne geht es leider nicht 😕
+  utter_start_incident_form:
+    - buttons:
+        - payload: /confirm
+          title: Ja
+        - payload: /deny
+          title: Nein
+      text: |
+        Ich glaube das muss sich mal unsere Technik anschauen... 🕵️
+
+        Damit das Problem dort möglichst zügig bearbeitet werden kann gibt es extra ein Formular.
+
+        Wollen wir die Fragen schnell gemeinsam durchgehen? Ich kümmere mich dann um den Rest 🤞
+  utter_out_of_scope/non_german:
+    - text: Es tut mir Leid, aber momentan sind wir nur deutschsprachig.
+  utter_out_of_scope/other:
+    - text: Es tut mir Leid, aber damit kann ich leider nichts anfangen 🤡
+  utter_thank_you:
+    - text: Danke 😊
+    - text: Das freut mich 🥳
+    - text: Merci 👊
+  utter_specify_issue:
+    - buttons:
+        - payload: /issue_account
+          title: Anmeldung
+        - payload: /issue_playback
+          title: Video
+        - payload: /handoff
+          title: Sonstiges
+      text: |
+        Hmmm...🤔
+
+        Ich kann dein Anliegen leider keinem Bereich zuordnen. Welche der Optionen passt thematisch am besten?
+  utter_cant_help:
+    - text: Hier kann ich dir leider nicht helfen 😔...
+  utter_handoff:
+    - text: Unter <zuschauerservice@zdf-service.de> erhälst du Hilfe von unseren menschlichen Mitarbeitern. 😉
+  utter_no_worries:
+    - text: Gern geschehen
+    - text: Kein Problem
+  utter_do_survey:
+    - text: |
+        Wenn du gerade die Evaluation durchführst, kannst du jetzt mit dem Fragebogen weitermachen.
+
+        Du darfst aber natürlich auch gerne noch mehr ausprobieren.
+  utter_apology_stream_interruptions:
+    - text: Das ist natürlich unschön. Für Unterbrechungen beim Stream kann es verschiedenste Gründe geben.
+  utter_change_video_resolution:
+    - text: Kommt es zu weniger Unterbrechungen wenn du die Videoqualität in den App Einstellungen auf "Niedrig" setzt?
+  utter_ask_issue_on_multiple_devices:
+    - text: Tritt das Problem auf all deinen Geräten oder nur auf einem bestimmten Gerät auf?
+  utter_try_lan:
+    - buttons:
+        - payload: /confirm
+          title: Ja, Moment...
+        - payload: /deny
+          title: Nein, leider nicht.
+      text: Hast du die Möglichkeit den Stream auf einem Gerät mit einer LAN-Verbindung zu starten? Zum Beispiel auf Deinem PC im Browser.
+  utter_restart_conversation:
+    - text: Du kannst die Konversation neustarten indem du den Chatbot in einem neuen Tab öffnest.
+

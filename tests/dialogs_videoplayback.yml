@@ -1,0 +1,54 @@
+stories:
+  - story: Try to find a resolution first
+    steps:
+      - user: |
+          Mein Video funktioniert nicht
+        intent: issue_playback
+      - action: utter_sorry_to_hear
+
+
+  - story: Video stutter
+    steps:
+      - user: |
+          Seit neuestem ruckelt die Wiedergabe unserer Videos wie bein einem alten Film. An unserem WLAN kann es nicht liegen. Die Konkurrenz läufft auch problemlos.
+        intent: issue_playback
+        // WLAN, Stutter, Competition works
+      - action:
+          | Beim WLAN können manchmal Probleme auftreten. Ruckelt der Stream auch auf anderen Geräten per LAN wie bsw auf dem Computer?
+      - user: |
+          ja ist auch mist
+      - action:
+          | alles klar, welche Videoqualität ist in deinen Einstellungen ausgewählt? (options)
+      - user: |
+          ich streame mit hoher qualität
+      - action:
+          | Kommt es zu weniger Unterbrechung wenn du die vorausgewählte Qualität auf "niedrig" setzt?
+      - user: |
+          ja/nein
+      - action:
+          | Check internet speed
+      - user: Answer speed
+      - action:
+          | If speed high enough then lets go
+
+  - story: Video Ton /Bild asynchron
+    steps:
+      - user: |
+          Die Tonspur stimmt nicht mit den Mundbewegungen überein. Sychronisation sehr schlecht
+
+
+
+Mögliche Fragen:
+  - Wlan -> Auch schonmal mit LAN probiert
+  - Tritt das Problem auf verschiedenen Geräte bei dir auf?
+  - Welche Videoqualität ist ausgewählt?
+  - Ändern der Videoqualität
+  - Check internet speed
+  - Tritt das Problem bei VOD oder Live auf?
+  - Tritt das Problem nur bei bestimmten Inhalten auf?
+  - Zu welcher Zeit tritt das Problem auf?
+
+
+Antworten:
+  - Wie ändere ich die Qualität?
+  - Wie schnell muss die Verbindung sein?

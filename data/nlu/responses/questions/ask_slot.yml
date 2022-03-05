@@ -1,0 +1,144 @@
+version: "2.0"
+responses:
+  utter_ask_a_detailed_problem:
+    - text: |
+        **Beschreibung des Problems** 📝
+
+        Damit unsere Techniker später möglichst gut informiert sind würde ich dich bitten dein Problem einmal so genau wie möglich zu beschreiben.
+  utter_ask_b_expected_behavior:
+    - text: |
+        **Erwartetes Verhalten** 📝
+
+        Du sagst es funktioniert nicht, der Experte sagt so soll das aber. Manchmal ist es hilfreich zu vergleichen welches Verhalten du eigentlich erwartet hättest. 😇
+  utter_ask_c_steps_to_reproduce:
+    - text: |
+        **Reproduzierbarkeit** 📝
+
+        Auch wenn dein Problem an einer Stelle der App auftritt kann die Ursache schon viel früher liegen. Beschreibe bitte so gut wie möglich was du vom Appstart bis zur Problemstelle gemacht hast.
+  utter_ask_platform:
+    - buttons:
+        - payload: /inform{"platform":"tv"}
+          title: TV
+        - payload: /inform{"platform":"handheld"}
+          title: Phone/Tablet
+        - payload: /inform{"platform":"web"}
+          title: Web
+      text: Auf welcher Plattform tritt das Problem auf?
+  utter_ask_vendor:
+    - condition:
+        - type: slot
+          name: platform
+          value: web
+      text: Von welchem Anbieter stammt dein Browser?
+    - text: Von welchem Hersteller stammt dein Gerät?
+  utter_ask_model_name:
+    - condition:
+        - type: slot
+          name: platform
+          value: web
+      text: Welchen Browser benutzt du?
+    - text: Wie lautet die genaue Bezeichnung deines Modells?
+  utter_ask_os_name:
+    - condition:
+        - type: slot
+          name: platform
+          value: tv
+      text: Handelt es sich um ein Android- oder iOS-Gerät?
+    - text: Handelt es sich um ein Android-, iOS-Device oder um einen Browser?
+  utter_ask_os_version:
+    - condition:
+        - type: slot
+          name: os_name
+          value: android
+      text: Welche Android Version ist momentan installiert?
+    - condition:
+        - type: slot
+          name: os_name
+          value: ios
+      text: Welche iOS Version ist momentan installiert?
+    - condition:
+        - type: slot
+          name: os_name
+          value: browser
+      text: Welche Browser-Version nutzt du? 🔢
+    - text: Welche Versionsnummer hat dein Betriebssystem?
+  utter_ask_connectivity:
+    - buttons:
+        - payload: /inform{"connectivity":"LAN"}
+          title: LAN
+        - payload: /inform{"connectivity":"WLAN"}
+          title: WLAN
+        - payload: /inform{"connectivity":"Mobile"}
+          title: Mobil
+      text: |
+        Wie bist du mit dem Internet verbunden?
+  utter_ask_autoplay:
+    - text: Ist die Autoplayfunktion in deinen Einstellungen aktiviert?
+  utter_ask_quality:
+    - buttons:
+        - payload: /inform{"quality":"high"}
+          title: Hoch
+        - payload: /inform{"quality":"medium"}
+          title: Mittel
+        - payload: /inform{"quality":"low"}
+          title: Niedrig
+      text: Welche Videoqualität hast du in deinen Einstellungen ausgewählt?
+  utter_ask_app_version:
+    - text: Welche App Version nutzt Du? Die Version findest du im "Mein ZDF"-Bereich. (z.B. 5.8.1)
+  utter_ask_confirm_app_version:
+    - text: Du hast mehrere Versionsnummern erwähnt. Ich bin mir unsicher, bei welcher App-Version tritt das Problem auf?
+  utter_ask_confirm_model_name:
+    - text: Ich bin mir nicht sicher, ob ich dein Gerät erkannt habe. Handelt es sich um ein {model_name}?
+  utter_ask_select_model:
+    - text: Du hast mehrere Geräte erwähnt. Ich bin mir unsicher, auf welchem Gerät tritt das Problem auf?
+  utter_ask_confirm_os_name:
+    - text: Du hast mehrere Betriebssysteme erwähnt. Ich bin mir unsicher, auf welchem System tritt das Problem auf?
+  utter_ask_confirm_vendor:
+    - text: Du hast mehrere Hersteller erwähnt. Ich bin mir unsicher, bei welchem tritt das Problem auf?
+  utter_ask_error_message:
+    - text: |
+        Ist eine Fehlermeldung sichtbar? Falls ja: Was wird dir angezeigt und wann tritt die Fehlermeldung auf?
+  utter_ask_video:
+    - text: Asking video title
+  utter_ask_video_content_type:
+    - buttons:
+        - payload: /inform{"video_content_type":"live"}
+          title: Live
+        - payload: /inform{"video_content_type":"vod"}
+          title: Video On Demand
+      text: |
+        Handelt es sich bei dem Video um einen Livestream oder um VOD?
+  utter_ask_video_content_id:
+    - text: Um welches Video handelt es sich? Der Videotitel, Sendungsname oder ein Link zum Video bzw. Livestream reicht als Information.
+  utter_ask_video_interruptions:
+    - condition:
+        - type: slot
+          name: video_content_type
+          value: live
+      text: Bricht der Livestream beim Anschauen ab?
+    - condition:
+        - type: slot
+          name: video_content_type
+          value: vod
+      text: Bricht das Video beim Anschauen ab?
+    - text: Kommt es zu Abbrüchen bei der Wiedergabe?
+  utter_ask_email_contact:
+    - buttons:
+        - payload: /deny
+          title: Nein, danke
+      text: Wenn du möchtest kannst du jetzt noch eine E-Mail Adresse angeben, damit wir dich über Updates in deinem Fall informieren können.
+  utter_specify_email:
+    - text: Wie lautet deine Email Adresse?
+  utter_validate_os_name:
+    - buttons:
+        - payload: inform{"os_name":"android"}
+          title: Android
+        - payload: inform{"os_name":"ios"}
+          title: iOS/tvOS
+        - payload: inform{"os_name":"unkown"}
+          title: Sonstige
+      text: Welches Betriebssystem läuft auf deinem Gerät?
+  utter_validate_os_version:
+    - text: Das ist keine Version eines Betriebssystems. Mögliche Antworten sind bsw Android 12, iOS 10 oder nur eine Nummer.
+  utter_validate_app_version:
+    - text: Das ist keine gültige App Version. Eine korrekte Versionsnummer hat das Format x.y.z. Die aktuelle Version ist beispielsweise 5.10.4.

@@ -1,0 +1,108 @@
+version: "2.0"
+nlu:
+- intent: chitchat/ask_how_are_you
+  examples: |
+    - Ja moin, wie gehts
+    - Wie gehts dir
+    - Was geht
+    - Was geht ab
+    - Wie stehts
+    - Was läuft
+    - Wie ist die Stimmung
+    - wie geht es dir
+- intent: chitchat/ask_isbot
+  examples: |
+    - Bist du ein Bot?
+    - bist du bot
+    - bist du ein chatbot?
+    - bist du wirklich ein bot
+    - bot?
+    - chatbot?
+    - ich glaube du bist ein bot
+    - bist du wirklich ein chatbot
+    - Ist das hier ein Bot
+- intent: chitchat/introduce
+  examples: |
+    - Wer bist du?
+    - Wie ist dein Name
+    - Stell dich vor
+    - Ich will wissen mit wem ich spreche
+    - Mit wem spreche ich
+    - Wer führt das Gespräch
+    - Sag mir deinen Namen
+    - wie heißt du
+    - ist da wer
+    - wer bist du?
+    - Sag mal wie heißt du
+    - Bist du der Robert?
+    - Wie nennt man dich
+    - Wie lautet dein Name?
+    - Wer hat dich programmiert?
+- intent: chitchat/insult
+  examples: |
+    - du bist scheiße
+    - du bist dumm
+    - du bist ein affe
+    - ich finde dich blöd
+    - Bist du eigentlich dumm
+    - Was machst du für einen Scheiße
+    - Das ist doch Mist was du redest
+    - dummer Bot
+    - Arsch
+    - Bitch
+    - Laber doch nicht dumm
+    - Idiot
+    - Vollidiot
+    - Spasti
+    - wurde das ding hier von vergoldeten entwicklern gebaut?
+    - GEZ ist scheiße
+    - du clown!
+    - GEZ ist scheisse
+    - Die App ist scheiße
+    - ok, wie wäre es hiermit. Ich finde Olli Welke ist ein Vollpfosten
+    - Zwangsfinanzierte Staatsfunk-Propaganda: ohne Neutralität und ohne journalistischen Ethos
+    - Zwangsgebühren - unendlich Geld und dann sowas!
+    - Finanziert durch 8 MRD Zwangsgebühren im Jahr.
+    - Die Inhalte des ZDF sind sachlich falsch bis manipulativ.
+    - Müll
+    - ZDF ist einfach nur minderwertiges staatlich gesponsortes mainstream geblabber.
+    - Miserabel
+    - Einfach nur Betrug.Das allerletzte.Bezahlst deine Zwangsgebühren.
+    - Du bist doof
+    - Du bist bescheuert, lass mich in Ruhe!
+    - leck mich
+    - weil du ein HURENSOHN bist?
+- intent: chitchat/babbling
+  examples: |
+    - Uhh
+    - ich bin Hase
+    - Kontext, Baby!!!
+    - das war kein Danke, Diggi
+    - Hmmm
+    - sheesh
+    - f
+    - s
+    - asdf
+    - blablibuba
+    - blabla
+    - stockt
+    - stocks
+    - mein Video
+    - Egal
+    - mir kann keiner helfen
+    - Ehrenmann
+    - MArkus Lanz betreibt Propaganda
+    - blablabla
+    - ebenso
+    - ✌
+- intent: chitchat/creator
+  examples: |
+    - wer ist robert
+    - Wer ist dieser Robert
+    - Kennst du Robert
+    - Wie findest du robert
+    - Robert
+    - Ja aber wer ist Robert
+    - ja aber wer ist robert?
+    - wer ist robert?
+    - Kennst du Robert?

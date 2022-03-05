@@ -1,0 +1,120 @@
+version: "2.0"
+stories:
+#  - story: Activation Issue - Email not found - New Account
+#    steps:
+#      - intent: issue_account
+#      - action: utter_sorry_to_hear
+#      - action: utter_ask_act_email_received
+#      - intent: deny
+#      - action: utter_hint_spam_folder
+#      - action: utter_ask_act_email_found
+#      - intent: deny
+#      - action: utter_hint_new_account
+#      - action: utter_check_additional_problem
+#
+#  - story: Activation Issue - Account not activated
+#    steps:
+#      - intent: issue_account
+#      - action: utter_sorry_to_hear
+#      - action: utter_ask_act_email_received
+#      - intent: confirm
+#      - action: utter_ask_account_activated
+#      - intent: deny
+#      - action: utter_hint_account_needs_acc
+#
+#  - story: Activation Issue - Email not found - Spam - Fixed
+#    steps:
+#      - intent: issue_account
+#      - action: utter_sorry_to_hear
+#      - action: utter_ask_act_email_received
+#      - intent: deny
+#      - action: utter_hint_spam_folder
+#      - action: utter_ask_act_email_found
+#      - intent: confirm
+#      - action: utter_ask_resolution_failed
+#      - intent: deny
+#      - action: utter_check_additional_problem
+#
+#  - story: Activation Issue - Explain Activation Email
+#    steps:
+#      - intent: issue_account
+#      - action: utter_sorry_to_hear
+#      - action: utter_ask_act_email_received
+#      - intent: explain
+#      - action: utter_explain_act_email
+#      - action: utter_ask_act_email_received
+#      - intent: confirm
+#      - action: utter_ask_account_activated
+#      - intent: confirm
+#      - checkpoint: cp_activation_passed
+#
+#  - story: Activation Issue - Explain Account Activation
+#    steps:
+#      - intent: issue_account
+#      - action: utter_sorry_to_hear
+#      - action: utter_ask_act_email_received
+#      - intent: confirm
+#      - action: utter_ask_account_activated
+#      - intent: explain
+#      - action: utter_explain_acc_activation
+#      - action: utter_ask_account_activated
+#      - intent: confirm
+#      - checkpoint: cp_activation_passed
+
+#  - story: Login Issue - Checkpoint Acc Passed
+#    steps:
+#      - intent: issue_account
+#      - action: utter_sorry_to_hear
+#      - action: utter_ask_act_email_received
+#      - intent: confirm
+#      - action: utter_ask_account_activated
+#      - intent: confirm
+#      - checkpoint: cp_activation_passed
+#
+#  - story: Login Issue - Checkpoint Reset Password
+#    steps:
+#      - checkpoint: cp_activation_passed
+#      - action: utter_ask_password_reset
+#      - intent: confirm
+#      - checkpoint: cp_password_reset_passed
+#
+#  - story: Login Issue - Password Reset Request - Resolution failed
+#    steps:
+#      - checkpoint: cp_activation_passed
+#      - action: utter_ask_password_reset
+#      - intent: deny
+#      - action: utter_action_password_reset
+#      - intent: confirm
+#      - action: utter_ask_resolution_failed
+#      - intent: confirm
+#      - checkpoint: cp_password_reset_passed
+#
+#  - story: Login Issue - Password Reset Request - Resolution failed (2)
+#    steps:
+#      - checkpoint: cp_activation_passed
+#      - action: utter_ask_password_reset
+#      - intent: deny
+#      - action: utter_action_password_reset
+#      - intent: deny # User denies password reset
+#      - checkpoint: cp_password_reset_passed
+#
+#  - story: Login Issue - Password Reset Request - Resolution success
+#    steps:
+#      - checkpoint: cp_activation_passed
+#      - action: utter_ask_password_reset
+#      - intent: deny
+#      - action: utter_action_password_reset
+#      - intent: confirm
+#      - action: utter_ask_resolution_failed
+#      - intent: deny
+#      - action: utter_check_additional_problem
+
+#  - story: Login Issue - Open incident
+#    steps:
+#      - checkpoint: cp_password_reset_passed
+#      - action: utter_start_incident_form
+#      - action: form_issue_account
+#      - active_loop: form_issue_account
+#      - active_loop: null
+#      - action: utter_incident_submit_success
+#      - action: utter_check_additional_problem

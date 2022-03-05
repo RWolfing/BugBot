@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../js/miese_hacks.js"></script>
+    <script>
+          // Local: http://localhost:5005
+          WebChat.default({
+            selector: "#webchat",
+            initPayload: "/welcome",
+            customData: {"language": "en"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+            socketUrl: "http://localhost:5005",
+            socketPath: "/socket.io/",
+            title: "Customer Support",
+            params: {"storage": "session"}, // can be set to "local"  or "session". details in storage section.
+            customMessageDelay: (message) => { return 0 } // dev only
+          })
+
+    </script>
+    <title>Customer Support RASA Prototyp</title>
+</head>
+<body>
+
+<div class="d-flex h-100 w-100 flex-column">
+
+    <header class="masthead w-100 mb-auto text-center" style="padding: 1rem">
+        <div class="inner">
+            <h3 class="masthead-brand">Chatbot Evaluation</h3>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link" href="https://www.cellular.de/">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main" class="inner content d-flex flex-row justify-content-center"
+          style="flex-wrap: wrap; gap: 50px 250px;">
+
+        <div class="container-video">
+            <video id="video" class="video" controls>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="intro">
+            <h1>User Feedback<br>Through <span style="color: #f97d19">AI</span></h1>
+
+            <p>Nutzerfeedback ist oft kurz und emotional. Das ist vor allem problematisch, wenn mal etwas nicht
+                funktioniert. Der entwickelte Prototyp nimmt negatives Feedback im Bereich Streaming auf und versucht
+                durch Konversation fehlende Kontextinformationen zu sammeln.</p>
+
+            <h3>Bitte führe für die Evaluation alle Schritte nacheinander aus:</h3>
+
+            <table class="mt-4" style="border-collapse: separate; border-spacing: 0px 20px;">
+                <tr>
+                    <td>
+                        <button class="btn btn-lg btn-secondary" onClick="scroll_to_video()">
+                            <span>1. Video anschauen</span>
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <button class="btn btn-lg btn-secondary"
+                                onClick="document.getElementsByClassName('rw-launcher')[0].click()">
+                            <span>2. Bot das Problem erklären</span>
+                        </button>
+                    </td>
+                    <td>
+                        <span class="material-icons icon-repeat">repeat</span> Gerne mehrmals 💪
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <button class="btn btn-lg btn-secondary"
+                                onClick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfHDIjWbamL96Y4jwwhMehyo_p-9r9EOOFYLJedXu8lgJwJPw/viewform?usp=sf_link','_blank')">
+                            <span>3. Survey beantworten</span>
+                        </button>
+                    </td>
+                </tr>
+            </table>
+            <p class="hint">Jede Konversation wird aufgezeichnet und verbessert den Chatbot. Da momentan
+                noch nicht sehr viele Konversationen vorliegen kann es häufig zu Fehlern kommen. Um eine
+                Konversation neu zu starten, muss ein neuer Tab geöffnet werden. ✌️</p>
+        </div>
+
+
+    </main>
+
+    <footer class="mastfoot mt-auto text-center">
+        <div class="inner">
+            <p>Version 0.1</p>
+        </div>
+    </footer>
+</div>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

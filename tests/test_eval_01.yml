@@ -1,0 +1,52 @@
+version: "2.0"
+stories:
+  - story: General Issue
+    steps:
+      - user: |
+          Der Service funktioniert nicht.
+        intent: issue
+      - action: utter_specify_issue
+      - user: |
+          Ich habe einen schwarzen bildschirm
+        intent: issue_playback
+      - action: action_set_incident_type_slot
+      - action: utter_start_incident_form
+
+  - story: Issue general
+    steps:
+      - user: |
+          Ich kann die Website nicht laden
+        intent: issue
+      - action: utter_specify_issue
+
+  - story: Out of scope issue
+    steps:
+      - user: |
+          Hallo
+        intent: welcome
+      - action: utter_welcome
+      - action: utter_how_can_I_help
+      - user: |
+          Ich wollte ein Folge von gestern gucken, aber sie wird mir nicht angezeigt
+        intent: nlu_fallback
+      - action: utter_default_hint
+
+  - story: NLU Fallback in form
+    steps:
+      - user: |
+          Ich kann keine Videos abspielen
+        intent: issue_playback
+      - action: action_set_incident_type_slot
+      - action: utter_start_incident_form
+      - intent: nlu_fallback
+      - action: utter_default
+
+  - story: Wer ist Robert
+    steps:
+      - user: |
+          Wer ist Robert
+        intent: chitchat/creator
+      - action: utter_chitchat
+
+
+

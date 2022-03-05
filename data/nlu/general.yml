@@ -1,0 +1,574 @@
+version: "2.0"
+nlu:
+- intent: welcome
+  examples: |
+    - Hallo
+    - Sehr geehrte Damen und Herren
+    - Guten Abend
+    - Guten Morgen
+    - hallo
+    - Hi
+    - Hey
+    - Grüß Gott
+    - Servus
+    - hi
+    - hi botnik
+    - HI
+    - Moin
+    - noch da?
+    - Hallo Botnik
+    - j amoin
+    - ja moin
+- intent: bye
+  examples: |
+    - bye bye
+    - ciao
+    - Tschaukakao
+    - Tschüss
+    - Tschüssi
+    - Wiedersehen
+    - Gute Nacht
+    - tschau
+    - ich bin weg
+    - tschau kakau
+    - tschüss
+    - bis bald
+    - machs gut
+    - cucu
+    - hau rein
+    - 👋
+    - ich muss jetzt weg. melde mich später wieder
+    - tschüß
+    - reingehauen
+- intent: inform
+  examples: |
+    - Ich habe ein [iphone mini](model_name)
+    - Es ist ein [iphone 11 Pro](model_name)
+    - Es ist ein [iPad 4](model_name)
+    - Ich nutze die App
+    - Ich habe ein [iphone 12](model_name) mit [ios]{"entity": "os_name", "group": "os"} [10]{"entity": "version", "group": "os"}
+    - Mein Gerät hat [iOS]{"entity": "os_name", "group": "os"} [9]{"entity": "version", "group": "os"}
+    - Mein Telefon läuft mit [iOS]{"entity": "os_name", "group": "os"} [14]{"entity": "version", "group": "os"}
+    - Ich nutze meinen [Android]{"entity": "os_name", "group": "os"} [TV]{"entity": "platform", "value": "tv"}
+    - Ich versuche es über mein [iphone X](model_name)
+    - Es geht auf meinem [Tablet](platform) nicht
+    - Ich benutze den [Browser](platform)
+    - Ich versuche es über [Chrome](browser_name)
+    - Ich nutze Safari
+    - Ich nutze ein [Iphone 13](model_name) um meine [Videos](video_content_type) abszuspielen. Mein Betriebssystem ist ein [ios]{"entity": "os_name", "group": "os"} [12]{"entity": "version", "group": "os"}.
+    - Ich habe ein [Samsung](vendor) [Galaxy S4](model_name)
+    - [Tablet](platform)
+    - Ich nutze ein [Iphone 6](model_name)
+    - max@muster.de
+    - Meine email lautet max@test.de
+    - Ich nutze immer [wifi](connectivity) wenn ich Videos schaue
+    - Ich benutze die Mediathek im [Web](platform)
+    - Mein [Handy]{"entity": "platform", "value": "phone"} ist ein [Android]{"entity": "os_name", "group": "os"}
+    - Es ist ein [iOS](os_name) Gerät
+    - Ich hab ein neues [iPhone 8 Plus](model_name)
+    - Es ist ein [Android]{"entity": "os_name", "group": "os"} [8]{"entity": "version", "group": "os"} installiert
+    - Ich möchte das es auf meinem [Tablet](platform) funktioniert
+    - Das müsste ein [Android]{"entity": "os_name", "group": "os"} [12]{"entity": "version", "group": "os"} sein
+    - Also zuerst hab ich das eine gemacht, dann was anders
+    - Naja ich will das es abspielt
+    - [Android]{"entity": "os_name", "group": "os"} [8]{"entity": "version", "group": "os"}
+    - Ich würde mir wünschen dass es funktioniert
+    - Ich möchte dass es funktioniert
+    - [tv](platform)
+    - Es ist ein [Android]{"entity": "os_name", "group": "os"} [10]{"entity": "version", "group": "os"}
+    - Auf [tv](platform)
+    - Es geht um meinen [Android]{"entity": "os_name", "group": "os"} [tv](platform)
+    - Auf meinem [Android]{"entity": "os_name", "group": "os"} klappt es nicht
+    - Bei meinem Gerät handelt es sich um ein [Android]{"entity": "os_name", "group": "os"}
+    - Ich hab es 10 mal versucht
+    - Es ging kurz vor 12 abends nicht mehr
+    - Wenn ich es 3 mach funktioniert es besser
+    - Das müsste ein [Android]{"entity": "os_name", "group": "os"} [8]{"entity": "version", "group": "os"} sein
+    - Es funktioniert nicht wenn ich diesen Knopf drücke
+    - Es funktioniert auf meinem [Samsung](vendor) nicht
+    - es geht auf meinem [Samsung](vendor) [Galaxy S8](model_name) nicht
+    - es sollte funktionieren
+    - Es ist ein [Android]{"entity": "os_name", "group": "os"} [8]{"entity": "version", "group": "os"}
+    - ich beschreibe das problem
+    - Ich versuche das mal zu beschreiben
+    - Ich würde das Problem so beschreiben: Meistens funktioniert es nicht
+    - Meine Problembeschreibung ist das es auf meinem Telefon nicht funktioniert
+    - kein comic sans ms auf dem scheiss knopf
+    - auf dem verfickten knopf ist comic sans ms
+    - 11 oder 12
+    - [Google](vendor)
+    - [honor 5x](model_name)
+    - [mate S](model_name)
+    - alle paar tage
+    - die verbindung zum [chromecast]{"entity": "platform", "value": "cast"} sollte nicht abbrechen
+    - überall
+    - [fernsehn](platform)
+    - Ich hab es zuerst auf meinem [TV](platform) gestartet und da war es kein Problem, dann auf meinem [Tablet](platform) und es hat nicht mehr geklappt
+    - Also gut, ich nutze ja die App meistens auf meinem [TV](platform) und da läuft alles spitze. Doch diesesmal habe ich es mal auf meinem [Tablet](platform) versucht und da geht es nicht die Videos abzuspielen.
+    - Ich möchte Videos auf meinem [Samsung](vendor) [Galaxy](model_name) abspielen
+    - Meine App Version ist [5.8.2](version).
+    - Ich nutze die Version [5.9.12](version) der App.
+    - Die Zdf mediathek hat die [5.3.1](version)
+    - [Ios]{"entity": "os_name", "group": "os"} [10]{"entity": "version", "group": "os"}
+    - [Ios](os_name) ist installier
+    - [Iphone x](model_name)
+    - Internet ausgeschaltet
+    - [apple](vendor)
+    - [galaxy s7](model_name)
+    - [Android]{"entity": "os_name", "group": "os"}
+    - Ich habe zerst das gemacht dann das gemacht
+    - es geht auf meinem [Samsung](vendor) nicht
+    - Beides
+    - [Samsung](vendor) [galaxy Tab a6](model_name)
+    - [livestreams](video_content_type) von allen Sendern ausser 3sat der geht
+    - app gestartet und [livestream]{"entity": "video_content_type", "value": "live"} ausgewählt
+    - dass das video abspielt
+    - Mein traumschiff FOlge 3
+    - App gestartet, Video gestartet und geschaut
+    - Video sollte weitergehen
+    - [pixel 5](model_name)
+    - videos spielen ab
+    - app gestartet und dann das video ausgewählt
+    - [Tv](platform) App öffnen, Video Teaser auf der Bühne auswählen.
+    - Es funktioniert einfach nicht
+    - Immer wenn ich offline bin während ich nen Kopfstand mache und rote Socken anhabe
+    - Der Maulwurf -- Undercover in Nordkorea
+    - Unterschiedliche, kommt immer wieder vor und nervt
+    - die neuste
+    - [Toshiba](vendor)
+    - aber auch bei [TV]{"entity": "platform", "value": "tv"}
+    - Ich suche ein [Video](video_content_type) aus, klicke es an, lasse es abspielen ....es läuft...und das Bild wird plötzlich für ein paar Sekunden unscharf.
+    - [chrome](browser_name)
+    - [Browser]{"entity": "platform", "value": "web"}
+    - https://www.zdf.de/filme/filme-sonstige/zwischen-welten-100.html
+    - Zwischen Welten
+    - [Video](video_content_type) ausgesucht und auf play gedrückt
+    - Dass das Video abgespielt wird
+    - Ich habe das [Video](video_content_type) in der Mediathek gesucht und es dann abgespielt.
+    - Das [Video](video_content_type) sollte flüssig abgespielt werden
+    - [Web](platform)
+    - [Edge](browser_name)
+    - [Firefox](browser_name)
+    - Tagessschau vom 19.09.2021
+    - In der Mediathek nach dem [Video](video_content_type) gesucht und es absgespielt.
+    - Der Urknall
+    - Ich erwarte, dass did [Videos](video_content_type) flüssig abgespielt werden
+    - [iOS](os_name)
+    - Ich nutze [Opera](browser_name)
+    - Das [video](video_content_type) soll laden
+    - Ich klicke 3 mal auf ein [video](video_content_type) und es lädt einfach nicht
+    - Deine [Videos](video_content_type) spielen alle ab
+    - [5.8.2](version)
+    - [iPhooooooone](model_name)
+    - [iPhone](model_name)
+    - Sag ich doch: High Flyers, Folge 1
+    - sven.jansen@ffwagency.com
+    - wie schon gesagt.... [tvOS]{"entity": "os_name", "group": "os"} [15]{"entity": "version", "group": "os"}
+    - Nochmal? [tvOS](os_name)
+    - Weder noch... es ist ein [tvOS](os_name) Device.
+    - alle [Videos](video_content_type)
+    - passiert immer beim [Streamen](video_content_type)
+    - [iOS]{"entity": "os_name", "group": "os"} [14]{"entity": "version", "group": "os"}
+    - [Apple](vendor)
+    - das ist bei jedem [Video](video_content_type)
+    - Die [Videos](video_content_type) sind in [HD](quality)
+    - [internet explorer](browser_name)
+    - [live](video_content_type)
+    - [browser]{"entity": "platform", "value": "web"}
+    - [brwoser](platform)
+    - [Apple TV 4K](model_name) (neuste Generation) mit [tvOS]{"entity": "os_name", "group": "os"} [15]{"entity": "version", "group": "os"}
+    - Nachrichten
+    - Ich habe die App gestartet, ein [Video](video_content_type) ausgewählt und auf den Abspielknopf gedrückt.
+    - Ich habe erwartet, dass das [Video](video_content_type) abspielt und nicht so lange zum Laden braucht.
+    - [VOD](video_content_type)
+    - [Opera](browser_name)
+    - Alle!
+    - Streams sind in 4K und [HDR](quality) erhältlich.
+    - Ernsthaft? ich suche mir ein Video aus, spiele es ab und [4K](quality) und [HDR](quality) sind nicht verfügbar. Das ist IMMER so!
+    - [amazon](vendor)
+    - ZDF [Livestream]{"entity": "video_content_type", "value": "live"}
+    - app gestartet, dann den [Livestream]{"entity": "video_content_type", "value": "live"}. Gestern ging es noch
+    - der [Livestream]{"entity": "video_content_type", "value": "live"} wird abgespielt
+    - [WLAN]{"entity": "connectivity", "value": "wlan"}
+    - auf [Phone](platform), manvhmal aucvh [tablett](platform)
+    - Tatort
+    - Also ich starte die APP, dann kommt nix. Will auf Video, aber es geht nicht.
+    - es geht aber nicht, kein Video
+    - Es geht nicht wenn ich video kucke
+    - die aktuellste
+    - Schwiegertochter Gesucht
+    - Videos spielen ab
+    - [Fernseher]{"entity": "platform", "value": "tv"}
+    - ZDF
+    - App geöffnet, auf [Live](video_content_type) geklickt. Aber da kam Fußball und nicht der Fernsehgarten
+    - Ich will das sehen wie jeden Samstag Abend
+    - [Sony](vendor) [TV]{"entity": "platform", "value": "tv"}
+    - Der Bergdokto
+    - [Livestream]{"entity": "video_content_type", "value": "live"}
+    - Smart [TB](platform)
+    - [Schwarz](vendor)
+    - Ich möchte 4K streams finden
+    - Auf meiner [Android](os_name) [TV]{"entity": "platform", "value": "tv"} App finde ich keine 4K/UHDStreams
+    - Ich möchte Markus Lanz in 4K sehen
+    - App gestartet, Kopfhörer eingesteckt, Video gestartet
+    - Dass Ton kommt
+    - Tagesschau vom 28.09.2021 20:00 Uhr
+    - [iPhone](model_name) natürlich, was sonst?
+    - [IPad](model_name)
+    - App geöffnet, Programm von gestern angeguckt. Da war nichts
+    - Ich habe es schon 10 mal versucht
+    - Auf meinem [Android](os_name) hab ich es 3 mal probiert.
+    - Ich klicke ungefähr 30 mal auf meinem [Android](os_name) [Phone](platform), aber es passiert nix
+    - Die Version ist [9]{"entity": "version", "group": "os"} auf meinem [Android]{"entity": "os_name", "group": "os"}
+    - ZDF heute
+    - [Huawei](vendor)
+    - Es lässt sich mit jedem Mal reproduzieren
+    - Ich teste das auf meinem [Huawei](vendor) [Mate 10](model_name) mit dem neusten [Android]{"entity": "os_name", "group": "os"} und das funktioniert nicht so wirklich
+    - Sendung mit dee Maus
+    - Mein [Handy]{"entity": "platform", "value": "phone"}
+    - Per [LAN](connectivity) die meiste Zeit
+    - Es ist die ZDFheute show
+    - Ich kann das bei jedem App start reproduzieren
+    - Klima, Krise, Kanzleramt
+    - [Honor](model_name) [Huawei](vendor)
+    - [Honor 8X](model_name) und einen [Samsung](vendor) [Fernseher]{"entity": "platform", "value": "tv"} mit [fireTV]{"entity": "platform", "value": "tv"} Stick HD
+    - Die Ärzte
+    - Ich hätte erwartet, dass die Folge auf der Plattform angeboten wird und ich diese abspielen kann.
+    - fire [tv](platform)
+    - Glaube [adroied](os_name)
+    - Ich möchte [Streams](video_content_type) in 4k sehen
+    - Ich bin natürlich per [LAN](connectivity) Kabel verbundne
+    - Das ist der [UHD]{"entity": "quality", "value": "high"} [Teststream](video_content_type)
+    - Naja es ist halt ein [Browser]{"entity": "platform", "value": "web"}, da gibt es keinen Hersteller
+    - Ich spiele das Video auf meinem PC ab und dann klappt das gar nicht. Heute ist gutes Wetter ich nutze die neuste [Browserversion](platform). Ich glaube [Chrome](browser_name)
+    - [UHD]{"entity": "quality", "value": "high"} [Test-VoD](video_content_type) - nur [FHD](quality)
+    - jupi@gmx.de
+    - Gefährlicher Wintereinbruch
+    - Ich nutze die App Version [5.10](version)
+    - Ich habe die Mediathek [5.11](version) installiert
+    - [5.6] macht faxen
+    - Auf [TV](platform) mit der Version [5.10.2](version) und auf der App mit der Version [5.11](version).
+    - [Xiaomi](vendor)
+    - Nicht viel, App gestartet
+    - App gestartet > Mein ZDF > Merkliste > Video angeklickt
+    - "Mein ZDF" öffnen, "Merkliste" öffnen, auf das erste [Video]{"entity": "video_content_type", "value": "vod"} klicken, abspielen
+    - Ich nutze [Chrome](browser_name) auf [Windows](os_name)
+    - [Nokia](vendor)
+    - Link über [bowser](platform) aufgerufen.
+    - Wintereinbruch
+    - [Duck duck go](browser_name)
+    - [Browser]{"entity": "platform", "value": "web"} aufgerufen
+    - [Mozilla](vendor)
+    - Link auf gerufen
+    - Nur den link im [browser]{"entity": "platform", "value": "web"} aufgerufen
+    - [brave](vendor) [browser]{"entity": "platform", "value": "web"}
+    - Ich bin von der Startseite aus auf den "Mein ZDF" Reiter gegangen und habe Meine Merkliste geöffnet. Hier habe ich dann das [Video]{"entity": "video_content_type", "value": "vod"} ausgewählt.
+    - Gefährlicher wintereinbruch
+    - Habe über einen Link das [Video]{"entity": "video_content_type", "value": "vod"} geöffnet, auf Play geklickt und dann kam kein Ton / das [Video]{"entity": "video_content_type", "value": "vod"} hat geruckelt
+    - [Xiaomi](vendor) [Android](os_name) T
+    - [Nexus 10](model_name)
+    - Das passiert seit heute
+    - Das Problem besteht seit heute
+    - Ich nutze mein [Mobilnetz](connectivity)
+    - Ich hab [5.9](version) oder [5.10](version)
+    - Die App [5.8](version) ist installiert
+    - Also ich hab auf meinem [Samsung](vendor) [Galaxy](model_name) S10 versucht die Championsleague zu schauen und das hat nicht geklappt
+    - [laptop](platform)
+- intent: confirm
+  examples: |
+    - Genau
+    - Exakt
+    - Ja
+    - In Ordnung
+    - Das klappt
+    - Jetzt geht es
+    - Ach jetzt funktioniert alles
+    - Cool passt
+    - Geht klar
+    - Jo
+    - Ja hab ich gemacht
+    - Jep das haut hin
+    - Ist durch
+    - Hab ich bekommen
+    - ja
+    - Ja habe ich aktiviert
+    - Ok
+    - meinetwegen
+    - ok
+    - fett
+    - Natürlich es funktioniert ja seit gestern nicht mehr
+    - okay
+    - klar
+    - jo
+    - ok hab ich
+    - dann los
+    - na gut
+    - gerne
+    - oke
+    - ja, gerne
+    - Ja, gerne
+    - Na klar
+    - Jap
+    - Ja, noch ein Anliegen
+    - ja, Mann
+    - ja, sag ich doch
+    - 👍🏼
+    - auch
+    - Oh man... ja gut
+    - ja, und es geht manchmal gar nicht
+    - ausgesprochen gerne
+    - wegen mir
+    - wenn du meinst
+    - Ja bitte schnell
+    - Bitte
+    - Ja es wird ein Fehler angezeigt
+    - ja die ganze Zeit
+    - ja, direkt nach dem Start
+- intent: deny
+  examples: |
+    - Nein
+    - Nö
+    - Vergiss es
+    - Das geht nicht
+    - Funktioniert nicht
+    - Ich habe nichts bekommen
+    - Bei mir funktioniert das nicht
+    - Geht bei mir nicht
+    - Nope
+    - Ne hab ich nicht bekommen
+    - Nein ich habe keine Email erhalten
+    - nein danke
+    - Ne bin ich nicht einverstanden
+    - Keines von beiden
+    - ich hab mich nie registriert
+    - bruder ich hab keine mail bekommen weil ich mich nie registriert habe
+    - NEE
+    - no
+    - nee danke
+    - neeee
+    - Keine
+    - nee
+    - NEIN
+    - Nix plattform
+    - nein
+    - NO
+    - nö
+    - ich hab kein problem
+    - ne
+    - ne, gibts nicht
+    - Nein, er läuft erst gar nicht
+    - nein, es startet gar nicht erst
+    - nein, ich will jetzt lieber ein Video schauen
+    - nichts davon
+    - möchte ich nicht angeben
+    - ungern
+    - nein, danke
+    - kein Bock
+    - Nein, danke!
+    - Geht Nicht!
+    - eigentlich nicht
+    - Gar nicht, fürchte ich
+    - ne hab ich ja gerade
+    - nein, ich meine ob [chromecast](platform) funktioniert
+    - Nö, darum gehts doch auch gar nicht.
+    - Nein, es ist keine Fehlermeldung sichtbar.
+    - kann gar nicht gestartet werden
+    - nein es spielt gar nicht ab
+    - Nein keine Fehlermeldung
+    - Nein es wird erst gar nicht gestartet
+    - ne passt
+    - ne lass mal
+    - ne passt schon
+    - Nein es kommt nicht zu abbrüchen
+    - Nein, es existiert nicht
+    - mir egal
+    - Nein, jetzt geht es
+    - Noch nicht
+    - ist mir nicht bekannt
+    - nein bitch
+    - gingerbread
+    - besser nicht
+    - nein, nur der Ton fehlt
+    - es wird nichts angezeigt
+- intent: cancel
+  examples: |
+    - stahp
+    - stop
+    - abbruch
+    - aufhören
+    - STAHP
+    - nene lass mal
+    - lass das bleiben
+    - sag ich nicht
+    - Ich mache das nicht
+    - Ich will das nicht
+    - ne will ich nicht
+    - ABBRUCH
+    - Ne mach selber
+    - Exit
+- intent: explain
+  examples: |
+    - Warum braucht ihr meine email
+    - Wozu
+    - Warum
+    - Warum wollt ihr das
+    - Wozu wir das benötigt
+    - Was ist hier der Hintergrund
+    - Warum diese Info
+    - Zu was
+    - Warum braucht es das
+    - Wozu braucht ihr die Info
+    - Warum ist mein Gerät wichtig
+    - Warum ist das relevant
+    - Warum ist das wichtig
+    - Ich verstehe nicht wozu ihr das braucht
+    - Ich verstehe nicht warum ich das sagen muss
+    - Warum braucht ihr die Auskunft
+    - warum ist da fucking comic sans ms auf dem knopf?
+    - wie schnell muss eine Internetverbindung für diese App sein?
+    - geht es auch ohne email adresse?
+    - Was passiert denn jetzt?
+    - was ?
+    - Was passier jetzt?
+    - warum brauchst du das?
+    - Ist das wirklich das Problem oder driften wir ab?
+    - Was spielt das für eine Rolle
+    - Muss ich das machen?
+- intent: help
+  examples: |
+    - Wo finde ich die Info
+    - Wo finde ich das
+    - Ich weiß nicht was das ist
+    - Das kenn ich nicht
+    - Was ist das
+    - Was bedeutet das
+    - Versteh ich nicht
+    - Ich check das nicht
+    - Hilfe
+    - Wie
+    - ?
+    - Was ist ein Gerätename?
+    - Ich weiß nicht wie mein Gerät heißt
+    - Ich versteh nicht wie ich das Problem beschreiben soll
+    - Wie beschreibe ich das Problem?
+    - was kannst du eigentlich
+    - was sind deine funktionen
+    - was kann ich dich fragen
+    - wobei kannst du mir helfen
+    - Was sind die optionen
+    - was sind meine optionen
+    - was kannst du tun
+    - was tust du
+    - bei was kannst du mir helfen
+    - was kannst du
+    - wie benutze ich dich
+    - kannst du noch etwas anderes
+    - ich hab ne frage
+    - ich habe eine frage
+    - kann ich dich was fragen
+    - wo finde ich die datenschutzerklärung
+    - ist die app dsgvo konform?
+    - habt ihr 4k?
+    - warum laufen videos ab
+    - kann ich dich was fragen?
+    - Ich habe eine Frage
+    - Ich hab ne Frage
+    - wo kann ich ein neues passwort anfordern?
+    - passwort reset
+    - ich will mein passwort zurücksetzen
+    - was kannst du?
+    - warum sind videos nur begrenzte zeit lang verfügbar?
+    - wo sind die FAQs
+    - häufige fragen
+    - Was kannst du?
+    - Kein plan
+    - weiß nich
+    - Weiß Ich nicht
+    - weiß nicht
+    - Ich checks nicht
+    - what?
+    - Wie kannst du mir helfen?
+    - was ist jetzt mit den Fragen
+    - wie kann ich die videostreaming qualität einstellen
+    - Die Frage wäre wie ich Videos auf mein [TV]{"entity": "platform", "value": "tv"} mit [Chromecast](platform) abspielen kann
+    - Wie kann ich ZDF auf meinem [Fernseher]{"entity": "platform", "value": "tv"} schauen?
+    - Support für [4K](quality) und [HDR](quality)?
+    - Werden Streams in [4K](quality) und [HDR](quality) unterstützt?
+    - weiß ich nicht, vielleicht 10
+    - ??
+    - ka
+    - ich weiss nicht, muss kucken
+    - keine ahnung
+    - Was soll ich antworten
+    - wie geht das?
+    - Was soll ich machen?
+    - Was soll ich hier beschreiben?
+    - Was ist eine gute Beschreibung
+    - Was wäre eine gute Antwort?
+    - Was sag ich hier am besten?
+    - Hm, hast du ein Beispiel?
+    - Gib mir ein Beispiel
+    - zum Beispiel?
+    - das fällt mir jetzt schwer
+    - Puh, da kenn ich mich nicht so aus
+    - Mir fehlt die Info
+    - weiß ich jetzt nicht
+    - keine Ahnung
+    - Ich benötige dabei Unterstützung
+    - wie starte ich die Konversation neu?
+    - Weiß ich nicht.. ein [Android]{"entity": "os_name", "group": "os"} [Tablet](platform)
+    - Wie kann ich leiser machen
+    - Oh je, das weiss icht nicht mehr sicher.
+    - Vielleicht
+    - eeeeh was für ein account_
+    - was weiss ich
+    - und jetzt
+    - ich bin mir unsicher
+    - ich finde keine Angabe
+- intent: discontent
+  examples: |
+    - Das ist alle scheiße hier
+    - ja was formular anbieten und dann überfordert sein
+    - Das ist schade
+    - Schade
+    - dude....
+    - haben wir doch gerade?!
+    - Geld zurück
+    - immer überfordert
+    - Schade...
+    - Schade, etwas mehr hätte ich schon erwartet
+    - Ich habe doch das Probleme beschrieben
+    - 😐
+    - bruuuuuuudiiii
+    - willst du mich eigentlich verscheissern
+    - Das hab ich dir doch schon gesagt
+    - Hab ich schon erwähnt
+    - Hab ich dir gesagt
+- intent: handoff
+  examples: |
+    - ich möchte mit einem menschen sprechen
+    - ich möchte mit dem echten support kontakt
+    - leite mich an einen menschen weiter
+    - ich will mit einem Mitarbeiter sprechen
+    - ich möchte mit einem menschen schreiben
+    - Kann ich mit einer Person sprechen
+    - Wie erreiche ich einen Menschen?
+- intent: thankyou
+  examples: |
+    - Vielen Dank
+    - Danke
+    - Merci
+    - thanks
+    - thank you
+    - dankeschön
+    - alles klar, danke
+    - ok danke
+    - ah ok danke
+    - 🙏
+- intent: resolved
+  examples: |
+    - Ahh, jetzt geht es.
+    - Oh, ich hab vergessen das Gerät einzuschaslten. Funktioniert nun alles. Danke.
+    - Hat sich erledigt, klappt jetzt
+    - Ich brauche nichts mehr
+    - Passt jetzt

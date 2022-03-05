@@ -1,0 +1,9 @@
+version: "2.0"
+responses:
+  utter_explain_act_email:
+    - text: Die Bestätigungmail benötigen wir, um deinen Account zu aktivieren.
+  utter_explain_acc_activation:
+    - text: |
+        Solange du deine E-Mail Adresse nicht verifziert hast ist dein Account nicht aktiviert.
+
+        Das bedeutet er kann nicht genutzt werden und ein Login schlägt fehl. 😕

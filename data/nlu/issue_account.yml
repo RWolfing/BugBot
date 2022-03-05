@@ -1,0 +1,47 @@
+version: "2.0"
+nlu:
+- intent: issue_account
+  examples: |
+    - Ich kann mich nicht einloggen
+    - Ich habe Probleme mit dem Login
+    - Mein Account kann sich nicht einloggen
+    - Ich kann mich nicht anmelden
+    - Die Anmeldung in der App funktioniert nicht
+    - Eine Anmeldung mit meiner Email ist nicht möglich
+    - Die Anmeldung läuft in einen Fehler
+    - Der Login geht auf meinem [Tablet](platform) nicht
+    - Die Anmeldung auf meinem [TV](platform) funktioniert nicht
+    - Bei dem Login im [Browser](platform) geht nix
+    - Bei der Anmeldung auf meinem [Fernseher](platform) funktioniert etwas nicht
+    - Bei mir geht der Login nicht
+    - Bei mir geht die Anmeldung gerade nicht
+    - Ich kann mich nicht auf meinem Gerät anmelden
+    - Ich kann mich auf meinem Gerät nicht einloggen
+    - anmeldung funktioniert nicht
+    - seit gestern ist es unmöglich sich einzuloggen
+    - Irgendwie kann ich mich seit gestern nicht mehr in der App anmelden
+    - login geht nicht
+    - ich hab ein problem mit der anmeldung
+    - Ich habe mein passwort vergessen
+    - Registrierung erfolgt ohne Bestätigungsmail, aber Anmeldung geht trotzdem nicht.
+    - Extrem schlecht programmierte App, unmöglich eine Jugendfreigabe PIN zu erstellen
+    - Jungendschutzpin erlaubt keine Eingabe der 4 Ziffern...auf mehreren Endgeräten nicht möglich.
+    - Ich wollte einen Film gucken, der ab 16 Jahren freigegeben ist. Mein Alter ist 57. Als ich zwecks Freigabe meine @mail-Adresse eingeben habe, wurde diese nicht akzeptiert
+    - Pin über [Smartphone](platform) nicht einzurichten warum überhaupt man bezahlt schon genug Geld und kann ohne Pin nichts schauen, unglaublich. Vollkommen überflüssig.
+    - Login funktioniert nicht
+    - Mittlerweile ist es unmöglich sich einzuloggen Sehr schade
+    - pin Eingabe geht nicht
+    - Die Registrierung für die Altersangabe ist nicht möglich. Die Daten des Personalausweises und Reisepasses werden trotz mehrfacher korrekter Eingabe nicht akzeptiert.
+    - Jugendschutz Passwort Änderung funktioniert nicht.
+    - Ich versuche schon seit stunden meine PIN einzugeben, aber nichts geht....PIN wird automatisch per sms eingesetzt, bitte warten.
+    - Trotz  Registrierung ein Freischalten von gesperrten 'Jugendschutzsendungen' nicht möglich ist!
+    - ich kann mich nicht registrieren. Sag iämämäerü dass Email Adresse und Passwort falsch sind
+    - Leider ist es nicht möglich die Altersfreigabe frei zu schalten.
+    - Jugendschutzpin erlaubt keine Eingabe der 4 Ziffern
+    - Es ist keine Pin-Eingabe möglich
+    - Altersfreigabe funktioniert nicht
+    - Ich kann seit einigen Tagen keine PIN mehr eingeben.
+    - Ich kann die PIN über das [Smartphone](platform) nicht einrichten
+    - Es ist nicht möglich die Jugendschutz PIN einzutippen. Die Zahlen werden nicht angenommen. Versuch es seit gestern ständig sowohl auf dem [Smartphone](platform) als auch auf dem [Tablet](platform).
+    - Bisher immer zufriedne gewesen, jetzt kann ich allerdings keine Jugenschutz-PIN einrichten. Alle Felder erscheinen und die Eingabe ist möglich.
+    - Die Zahlen in den PIN-Felder erscheinen nicht und es lässt sich somit auch keine PIN einrichten.

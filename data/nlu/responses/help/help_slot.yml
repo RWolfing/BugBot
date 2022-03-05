@@ -1,0 +1,53 @@
+version: "2.0"
+responses:
+  utter_can_not_help_slot:
+    - text: |
+        Hier kann ich dir leider nicht helfen 😔...
+
+        Versuch es einfach so gut wie möglich zu beantworten 💪
+  utter_help_a_detailed_problem:
+    - text: |
+        Deine Beschreibung dient als Grundlage für den Fehlerbericht. Ich werde versuchen anhand deiner Beschreibung alle wichtigen Informationen automatisch zu sammeln.
+
+        Du kannst beispielsweise etwas sagen wie: Ich versuche auf meinem iPhone 12 den Film "Pipi Langstrump" abzuspielen. Sobald das Video startet stürzt die App jedoch ab.
+
+        Desto detaillierter desto besser! Aber keine Sorge, falls etwas fehlt frag ich nochmal nach 😉
+  utter_help_b_expected_behavior:
+    - text: |
+        Was müsste deiner Meinung nach anstatt des Fehlers passieren?
+
+        Zum Beispiel: Ich würde erwarten, dass für Pipi Langstrump die englischen Untertitel angezeigt werden.
+  utter_help_c_steps_to_reproduce:
+    - text: |
+        Es ist wichtig nachvollziehen zu können wie es zu einem Fehler kam.
+
+        Zum Beispiel: Ich habe die App auf meinem Tablet gestartet, nach etwas scrollen habe ich den Film Pipi Langstrump in meinen Empfehlungen ausgewählt. Als die Detailseite geladen wurde kam es zu dem Fehler.
+  utter_help_platform:
+    - text: |
+        Geläufige Platformen sind zum Beispiel TV oder Tablet.
+  utter_help_vendor:
+    - text: |
+        Für iPhones ist der Hersteller zum Beispiel Apple. Für Browser wie Firefox heißt der Anbieter Mozilla. Falls du dir unsicher bist hilft eine kurze Google-Suche sicher schnell weiter.
+  utter_help_model_name:
+    - text: |
+        Die Gerätebezeichnung findest du sicher auf einer Rechnung oder der Verpackung des Gerätes. Häufig genutzte Modelle sind zum Beispiel iPhone 12 oder Samsung Galaxy S10.
+  utter_help_app_version:
+    - text: |
+        Die App Version ist wichtig für unsere Entwickler. Du findests sie im App Store unter den App Details oder im "Mein ZDF"-Bereich. Die Version erkennst du an dem Format x.y.z oder z.B. 5.8.1 💡
+  utter_help_os_version:
+    - condition:
+        - type: slot
+          name: os_name
+          value: android
+      text: |
+        Deine Android Version findest du in den Einstellungen des Gerätes unter "Über das Gerät > Android-Version".
+    - text: |
+        Die Version deines Betriebssystems findest du in den Einstellungen deines Gerätes.
+  utter_help_general:
+    - text: |
+            Ich muss noch viel lernen aber momentan kann ich:
+            * Häufige Fragen zur Mediathek beantworten
+            * Hilfestellung bei Problemen mit der Anmeldung
+            * Einen Fehlerbericht für Wiedergabeprobleme erstellen
+
+            Du kannst zum Beispiel etwas sagen wie: Meine Videos spielen nicht ab

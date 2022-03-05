@@ -1,0 +1,10 @@
+version: "2.0"
+rules:
+  - rule: chitchat in account form
+    condition:
+      - active_loop: form_issue_account
+    steps:
+      - intent: chitchat
+      - action: utter_chitchat
+      - action: utter_ask_continue
+

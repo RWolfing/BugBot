@@ -1,0 +1,76 @@
+version: "2.0"
+nlu:
+- intent: issue
+  examples: |
+    - Ich will die App über meinen [FireTV]{"entity": "platform", "value": "tv"} Stick auf meinem [Fernseher]{"entity": "platform", "value": "tv"} spiegeln. Mit anderen Apps funktioniert das, mit der zdf App nicht
+    - Ich kann die Folge von gestern nicht nachgucken!
+    - Bei mir funktioniert wieder gar nix in der App
+    - Alles kaputt
+    - Ich habe sehr oft Komplettausfälle
+    - Die App lässt sich nicht öffnen
+    - App nutzt nicht das ganze Display zum abspielen von Videos
+    - Es können weder auf der Android App noch auf der Fire TV app neue Sendungen zur Merkliste hinzugefügt werden.
+    - Nur Fehler. Instabil und schlechte Verbindung
+    - Stockt öfters trotz guter Verbindung
+    - Ich habe ein Problem mit der App
+    - Ich habe ein Problem mit der Mediathek
+    - Bei mir funktioniert etwas nicht in der App
+    - Ich habe Probleme mit dem Produkt
+    - Ich bin mit meinem [TV](platform) mit [LAN](connectivity) verbunden und versuche ein [Video](video_content_type) abzuspielen. Das haut nicht hin
+    - Mein [vendor_entity](vendor) funktioniert überhaupt nicht mit der App
+    - Auf meinem [Iphone](model_name) kann ich die App nicht mehr installieren
+    - Ich versuche die Mediathek mit dem [Browser](platform) zu nutzen, aber es geht nicht
+    - Die App funktioniert nicht
+    - ich hab ein problem auf meinem [Samsung](vendor) [Galaxy](model_name)
+    - die mediathek ist scheisse, 0 sterne!!1
+    - Ok ich hab doch noch ein problem
+    - ich hab n problem
+    - Absolute Katastrophe! Die App braucht ewig zum öffnen und die Merkliste funktioniert nun gar nicht mehr.
+    - Keine Bilder in der App
+    - Ich kann die App nicht öffnen
+    - meine app ist kaputt
+    - Die App ist durchgehend am hängen.
+    - Merkliste unnutzbar, da, wenn man etwas hinzufügen oder löschen möchte, immer erscheint, das [Video](video_content_type) könne gerade nicht synchronisiert werden.
+    - Man hat kein internet und die sendungen laden ewig
+    - app funktioniert nicht
+    - Ständige Verbindungs- und Stabilitätsprobleme....sehr anstrengend
+    - Die App macht nur probleme
+    - Funktioniert nicht!
+    - Ich bin nicht mehr zufrieden mit der App da sie seit 3 Tagen nicht mehr richtig geht.
+    - erstellt mal einen fehlerbericht
+    - Hallo, ich hab ein Problem mit der ZDFmediathek auf [tvOS](os_name). Und zwar scrollen die Bänder teilweise automatisch nach rechts. Ich kann die App dann nicht mehr bedienen. Das Problem trat sowohl unter [tvOS]{"entity": "os_name", "group": "os"} [14.8]{"entity": "version", "group": "os"} als auch mit der neuesten Version [tvOS]{"entity": "os_name", "group": "os"} [15]{"entity": "version", "group": "os"} auf. Die neueste Version der App ist installiert.
+    - zdf.de ist offline
+    - Ich kann die Website nicht laden.
+    - Bilder in der App laden nicht
+    - Bilder laden nicht
+    - Fernsehgarten geht nicht
+    - Der Service funktioniert nicht
+    - noch ein problem
+    - Ich habe Probleme mit der Mediathek auf Version [5.10)(version)
+    - Als das Problem auftrat hatte ich Version [5.11](version) installiert
+    - Die Probleme treten immer mit der [4.9.1](version) auf
+    - Nächstes Problem
+    - Mediathek schrott
+    - Probleme mit Mediathek
+    - Die App soll starten, damit ich ein [Video]{"entity": "video_content_type", "value": "vod"} sehen kann
+    - Na gut dann würde ich gern über das Problem berichten
+- intent: issue_crash
+  examples: |
+    - Version [8.3](version) crasht bei mir ständig
+    - Die App stürtz ständig ab.
+    - Die App stürzt ständig ab. Das schmälert die Nutzererfahrung deutlich!
+    - App startet seit letztem Update nicht mehr
+    - Immer neue Updates, aber nichts läuft mehr. App stürzt ständig ab,
+    - Was ist nur mit dieser App los??? Hängt sich ständig auf, muss neu gestartet werden
+    - Stürzt seit dem letzten Update alle paar Minuten ab. Schade
+    - Ständig steht dort..app wurde angehalten. Erneutes laden, absturz, erneutes laden
+    - App stürzt alle 6 Minuten ab beim sehen von Videos daher unbrauchbar
+    - Diese App ist wirklich nervig, da sie recht oft Aussetzer hat oder ganz abstürzt!
+    - War mal gut. Neuerdings stoppt die App nach kurzer Zeit auf beiden Android-Geräten und optimalem [WLAN](connectivity).
+    - Die App crasht am laufenden Band
+    - Es kommt nur die ganze zeit zu Abstürzen in der App
+    - Ja die Mediathek stürzt die ganze Zeit ab
+    - Die App Crasht nur die ganze Zeit
+    - Nein, nur dass die App unerwartet beendet wurde
+    - Beim klick auf das App Icon stürzt die App sofort ab
+    - Die App stürzt ab

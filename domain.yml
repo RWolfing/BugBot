@@ -1,0 +1,319 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+  - welcome:
+      use_entities: true
+  - inform:
+      use_entities: true
+  - out_of_scope:
+      use_entities: false
+  - faq:
+      use_entities: false
+  - confirm:
+      use_entities: true
+  - deny:
+      use_entities: true
+  - cancel:
+      use_entities: false
+  - nlu_fallback:
+      use_entities: true
+  - trigger_response_selector:
+      use_entities: false
+  - praise:
+      use_entities: false
+  - explain:
+      use_entities: false
+  - help:
+      use_entities: false
+  - chitchat:
+      use_entities: false
+  - discontent:
+      use_entities: false
+  - handoff:
+      use_entities: false
+  - bye:
+      use_entities: false
+  - thankyou:
+      use_entities: false
+  - resolved:
+      use_entities: false
+
+  - issue:
+      use_entities: true
+  - issue_account:
+      use_entities: true
+  - issue_crash:
+      use_entities: true
+
+  - issue_playback:
+      use_entities: true
+  - issue_synchronization:
+      use_entities: true
+  - issue_stream_interruptions:
+      use_entities: true
+  - issue_offline:
+      use_entities: true
+
+entities:
+  - vendor
+  - model_name
+  - platform
+  - os_name
+  - browser_name
+  - connectivity
+  - quality
+  - version
+  - app_version
+  - video_content_type
+  - video_content_id
+  - email
+slots:
+  vendor:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  model_name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  platform:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  os_name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  os_version:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  email:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  account_activated:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  password_reset:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  resolution_failed:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: true
+  act_email_received:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: true
+  video:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  time:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  a_detailed_problem:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  b_expected_behavior:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  c_steps_to_reproduce:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  connectivity:
+    type: categorical
+    initial_value: null
+    influence_conversation: false
+    values:
+      - lan
+      - wlan
+      - cellular
+  autoplay:
+    type: bool
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  video_interruptions:
+    type: text
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  quality:
+    type: categorical
+    initial_value: null
+    influence_conversation: false
+    values:
+      - hoch
+      - mittel
+      - niedrig
+  app_version:
+    type: text
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  error_message:
+    type: text
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  video_content_id:
+    type: text
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  video_content_type:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    auto_fill: true
+  email_contact:
+    type: text
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  issue_type:
+    type: categorical
+    initial_value: null
+    influence_conversation: true
+    values:
+      - undefined
+      - stream_interrupt
+      - synchronisation
+      - playback
+      - offline
+  confirm_required:
+    type: list
+    initial_value: null
+    auto_fill: false
+    influence_conversation: false
+  confirm_slot:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: false
+
+actions:
+  - validate_form_issue_playback
+  - submit_incident
+  - action_explain_requested_slot
+  - action_help_fill_requested_slot
+  - action_set_incident_type_slot
+  - action_ask_confirm_slot
+
+forms:
+  form_issue_playback:
+    ignored_intents:
+      - explain
+      - help
+      - chitchat
+      - out_of_scope
+      - cancel
+      - discontent
+    required_slots:
+      a_detailed_problem:
+        - type: from_text
+      b_expected_behavior:
+        - type: from_text
+      c_steps_to_reproduce:
+        - type: from_text
+      video_content_type:
+        - entity: video_content_type
+          type: from_entity
+        - type: from_text
+      video_content_id:
+        - type: from_entity
+          entity: video_content_id
+        - type: from_text
+      video_interruptions:
+        - type: from_intent
+          value: true
+          intent: issue_stream_interruptions
+        - type: from_intent
+          value: false
+          intent: deny
+        - type: from_intent
+          value: true
+          intent: confirm
+        - type: from_text
+      platform:
+        - entity: platform
+          type: from_entity
+      model_name:
+        - type: from_entity
+          entity: model_name
+        - type: from_entity
+          entity: browser_name
+        - type: from_text
+      vendor:
+        - type: from_entity
+          entity: vendor
+        - type: from_text
+      os_name:
+        - type: from_entity
+          entity: os_name
+          group: os
+      os_version:
+        - type: from_entity
+          entity: version
+          group: os
+        - type: from_entity
+          entity: version
+      app_version:
+        - type: from_entity
+          entity: version
+        - type: from_entity
+          entity: app_version
+      connectivity:
+        - type: from_entity
+          entity: connectivity
+        - type: from_text
+      error_message:
+        - type: from_intent
+          value: no_error_msg
+          intent: deny
+        - type: from_text
+      email_contact:
+        - type: from_entity
+          entity: email
+        - type: from_intent
+          value: none
+          intent: deny
+
+
+  form_issue_account:
+    required_slots:
+      email:
+        - entity: email
+          type: from_entity
+      platform:
+        - entity: platform
+          type: from_entity
+
+e2e_actions: [ ]

@@ -1,0 +1,68 @@
+version: "2.0"
+nlu:
+- intent: faq/youth_check
+  examples: |
+    - Wie funktioniert die Altersüberprüfung
+    - Wie wird mein Alter überprüft
+    - Mit der Altersbeschränkung wie funktioniert das?
+    - Wie schaue ich Sendungen mit Altersbeschränkung
+    - Was brauche ich für die Altersüberprüfung
+    - Was ist dieser Alterscheck
+- intent: faq/download
+  examples: |
+    - Kann ich Videos in der Mediathek herunterladen?
+    - Wie funktioniert der Download von Videos?
+    - Ist es möglich Videos herunterzuladen?
+    - Wie lade ich Videos herunter?
+    - Kann ich in der Mediathek Videos downloaded?
+    - Gibt es Videos auch als Download?
+    - Existiert eine Downloadfunktion?
+    - wie kann ich eine serie downloaden?
+    - kann ich in der mediathek videos herunterladen
+    - kann ich videos offline speichern?
+    - gibt es auch offline funktionen?
+    - Wie geht das mit offline videos?
+    - gibt es einen offline modus?
+    - Kann ich videos runterladen
+    - offline videos?
+- intent: faq/my_zdf
+  examples: |
+    - was ist mein zdf
+    - was ist meinzdf
+    - Worum geht es bei meinzdf
+    - Wozu brauche ich meinzdf
+    - Was kann ich mit meinzdf machen
+    - Was ist der mein ZDF Bereich?
+    - Was kann ich mit dem ZDF konto machen
+    - Was sind die Vorteile eines Kontos bei der Mediathek
+- intent: faq/program
+  examples: |
+    - guten tag, wann läuft maybrit illner?
+    - wo finde ich das fernsehprogramm?
+    - Ich finde den [Film](video_content_type) von gestern Abend nicht
+    - Um welche zeit kommt die tagesschau?
+    - was läuft heute im zdf
+    - was läuft huete?
+    - die rosenheim cops sind nicht in der app zu sehen
+    - rosenheim cops ist nicht in der liste
+    - Was läuft heute um 20:15 Uhr ?
+    - Wann kommt die nächste Doku ?
+    - Um welche zeit kommt die tagesschau ?
+    - ZDF heute Show: Richtig dooff
+    - Gestern lief im FreeTV eine Folge, diese würde ich heute gerne angucken, sie ist allerdings in der Mediathek nicht verfügbar.
+    - Ich wollte eine Folge von gestern gucken, aber sie wird mir nicht angezeigt.
+    - Wo finde ich das Programm?
+    - Wo läuft meine Lieblingssendung
+    - Wo läuft die heute show?
+- intent: faq/geo_blocked
+  examples: |
+    - Na herzlichen Dank dafür in Deutschland brauch ich die App nicht und im Ausland (EU) ist sie unbrauchbar.
+    - Sie können nur in Deutschland benutzen
+    - Im grenznahen Raum läuft die App aus rechtlichen Gründen nicht!
+    - Ich bin in der Ukraine am Schwarzen Meer im Urlaub, und habe mich auf das EM Finale gefreut. Jetzt funktioniert das aus "rechtlichen" Gründen hier nicht.
+    - Das meiste kann man nicht in Schweden sehen ☹️
+    - Ich kann keine Videos im Ausland sehen
+    - Jedesmal wenn ich versuche ein Video außerhalb Deutschland abzuspielen klappt das nicht
+    - Warum geht keines der Videos im Ausland?
+    - Im Ausland funktionieren die Streams überhaupt nicht
+    - Ich bin nicht in Deutschland und jetzt kann ich kein Video mehr schauen.

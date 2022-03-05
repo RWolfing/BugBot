@@ -1,0 +1,54 @@
+version: "2.0"
+
+stories:
+  - story: General Problem
+    steps:
+      - or:
+          - intent: issue
+          - intent: inform
+      - action: utter_specify_issue
+
+  - story: Help
+    steps:
+      - intent: help
+      - action: utter_help_general
+
+  - story: Help with chitchat
+    steps:
+      - intent: chitchat
+      - action: utter_chitchat
+      - intent: help
+      - action: utter_help_general
+
+  - story: End faq with thank you
+    steps:
+      - intent: faq
+      - action: utter_faq
+      - or:
+          - intent: confirm
+          - intent: thankyou
+      - action: utter_no_worries
+
+  - story: bye
+    steps:
+      - intent: bye
+      - action: utter_byebye
+
+  - story: Just inform ask for issue
+    steps:
+      - intent: inform
+      - action: utter_specify_issue
+
+  - story: Random confirm after byebye
+    steps:
+      - intent: bye
+      - action: utter_byebye
+      - intent: confirm
+      - action: action_listen
+
+  - story: Random confirm after praise
+    steps:
+      - intent: praise
+      - action: utter_thank_you
+      - intent: confirm
+      - action: action_listen

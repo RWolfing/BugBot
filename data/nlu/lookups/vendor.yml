@@ -1,0 +1,20 @@
+version: "2.0"
+nlu:
+  - lookup: vendor
+    examples: |
+      - Samsung
+      - Apple
+      - Huawei
+      - Xiaomi
+      - Motorola
+      - LG
+      - Sony
+      - OnePlus
+      - Oppo
+      - Toshiba
+      - Google
+      - Amazon
+      - Schwarz
+      - Microsoft
+      - Mozilla
+      - Nokia

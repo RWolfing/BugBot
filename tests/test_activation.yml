@@ -1,0 +1,40 @@
+stories:
+  - story: Checkpoint Account Activation
+    steps:
+      - user: |
+          Anmeldung geht nicht.
+        intent: issue_account
+      - action: utter_sorry_to_hear
+      - action: utter_ask_act_email_received
+      - user: |
+          Ja
+        intent: confirm
+      - action: utter_ask_account_activated
+      - user: |
+          ja
+        intent: confirm
+      - action: utter_ask_password_reset
+
+  - story: Checkpoint Account Activation - No account activation
+    steps:
+      - user: |
+          Ich hab ein problem mit der anmeldung
+        intent: issue_account
+      - action: utter_sorry_to_hear
+      - action: utter_ask_act_email_received
+      - intent: confirm
+        user: |
+          Ja
+      - action: utter_ask_account_activated
+      - intent: deny
+        user: |
+          Nein
+      - action: utter_hint_account_needs_acc
+      - intent: confirm
+        user: |
+          ok hab ich
+      - action: utter_ask_resolution_failed
+      - intent: deny
+        user: |
+          ne
+      - action: utter_check_additional_problem

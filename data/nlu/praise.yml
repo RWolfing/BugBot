@@ -1,0 +1,38 @@
+version: "2.0"
+nlu:
+- intent: praise
+  examples: |
+    - Ich finde die App übersichtlich und umfangreich, gut gestaltet
+    - Läuft super
+    - 👍 sehr gute App
+    - Gut
+    - Sehr begeistert von der Qualität und dem Angebot der App
+    - Super!
+    - Bei mir läuft alles. Kann mich nicht beschweren.
+    - Top
+    - Immer ohne Probleme, einfach gut.
+    - Ich finde die App spitze.
+    - Die Mediathek ist der hammer.
+    - Ich liebe Tatort.
+    - Um mit den Worten Hans Rosenthal's zu sprechen : Ich bin der Meinung: Die Mediathek ist spitze!
+    - Sehr gut
+    - Bestens
+    - Top app
+    - Gute Mediathek...weiter so!!!
+    - Sehr gute live Übertragung
+    - Sie ist eine gute App
+    - Sehr gut!!!
+    - Hervorragende App
+    - Einfach überstichtlich und klar sensationell
+    - Sehr gut 👍
+    - Super aufgebaute Mediathek.
+    - Gute App. Sinnvoll und sehr nützlich.
+    - Ich wollte nur mal sagen, dass ich sehr zufrieden mit der App bin
+    - Die App ist einfach zu bedienen und hat ein gutes Programm. Ich bin sehr zufrieden.
+    - coooool
+    - toll
+    - supi
+    - Hallo ich finde die App sehr gut.
+    - zu nichts, war nur ein Kompliment
+    - nice
+    - goil

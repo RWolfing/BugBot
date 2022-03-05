@@ -1,0 +1,47 @@
+version: "2.0"
+responses:
+  utter_can_not_explain:
+    - text: |
+        Hmmm... 💭
+
+        Ich würde dir das gerne erklären, aber leider weiß ich es auch nicht so genau.
+
+        Aber es ist bestimmt wichtig 🤞
+  utter_explain_a_detailed_problem:
+    - text: |
+        Deine Beschreibung dient als Grundlage für den Fehlerbericht. Ich werde versuchen anhand deiner Beschreibung alle wichtigen Informationen automatisch zu sammeln.
+  utter_explain_b_expected_behavior:
+    - text: |
+        Manchmal kommt es trotz der besten Beschreibung zu einem Missverständnis wo der Fehler liegt. In diesen Fällen hilft erfahrungsgemäß nochmal eine kurze Beschreibung des erwarteten Verhaltens.
+  utter_explain_c_steps_to_reproduce:
+    - text: |
+        In der Mediathek passieren ganz viele komplizierte Dinge im Hintergrund die man als Nutzer oft gar nicht bemerkt... Und oft liegt die Ursache ganz woanders als erwartet!
+
+        Deswegen ist es auch interessant welche Aktionen Du seit dem Start der App durchgeführt hast. 🕵️‍
+  utter_explain_model_name:
+    - text: Der Name deines Geräts ist wichtig! Unsere Technik wird später versuchen dein Problem auf einem gleichen Model nachzustellen.
+  utter_explain_vendor:
+    - text: Der Hersteller deines Geräts ist wichtig! Manchmal treten Fehler nur bei bestimmten Modellen auf. 😬
+  utter_explain_app_version:
+    - text: |
+        Die App Version ist wichtig damit unsere Entwickler besser nachvollziehen können wo der Fehler auftritt.
+  utter_explain_platform:
+    - text: |
+        Geläufige Platformen sind zum Beispiel TV oder Tablet.
+  utter_explain_os_version:
+    - condition:
+        - type: slot
+          name: os_name
+          value: android
+      text: |
+        Deine Android Version findest du in den Einstellungen des Gerätes unter "Über das Gerät > Android-Version".
+    - text: |
+        Die Version deines Betriebssystems findest du in den Einstellungen deines Gerätes.
+  utter_explain_general:
+    - text: |
+            Ich muss noch viel lernen aber momentan kann ich:
+            * Häufige Fragen zur Mediathek beantworten
+            * Hilfestellung bei Problemen mit der Anmeldung
+            * Einen Fehlerbericht für Wiedergabeprobleme erstellen
+
+            Du kannst zum Beispiel etwas sagen wie: Meine Videos spielen nicht ab

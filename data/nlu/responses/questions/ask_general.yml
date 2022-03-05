@@ -1,0 +1,48 @@
+version: "2.0"
+responses:
+  utter_ask_submit:
+    - buttons:
+        - payload: /confirm
+          title: Ja, gerne 👍
+        - payload: /deny
+          title: Nein, besser nicht 👎
+      text: |
+        Spitze! Das sind alle nötigen Infos 🚀
+
+        Wenn du einverstanden bist würde ich den Bericht jetzt abschicken?
+  utter_ask_continue:
+    - buttons:
+        - payload: /confirm
+          title: Ja
+        - payload: /deny
+          title: Nein
+      text: Wollen wir weiter machen?
+  utter_ask_stop_form:
+    - buttons:
+        - payload: /confirm
+          title: Ja
+        - payload: /deny
+          title: Nein
+      text: Du möchtest das Formular lieber abbrechen?
+  utter_check_additional_problem:
+    - text: Gibt es sonst noch ein Anliegen?
+    - text: Kann ich noch bei etwas anderem helfen?
+  utter_ask_help:
+    - text: Wie kann ich dir heute helfen?
+    - text: Wo drückt der Schuh? 👂
+    - text: Worum geht es?
+  utter_ask_password_reset:
+    - text: |
+        Manchmal sind Tippfehler bei der Erstellung des Passworts der Grund für Probleme bei der Anmeldung.
+
+        Hast du schon versucht ein neues Passwort zu vergeben?
+  utter_ask_email:
+    - text: Wie lautet deine E-Mail Adresse?
+  utter_ask_act_email_received:
+    - text: Hast du die Bestätigungsmail nach der Registrierung erhalten?
+  utter_ask_account_activated:
+    - text: Konntest du deinen Account erfolgreich über die Bestätigungsmail aktivieren?
+  utter_ask_resolution_failed:
+    - text: Tritt das Problem weiterhin auf?
+  utter_ask_act_email_found:
+    - text: Hast du die Email mit dem Aktivierungslink gefunden?
