@@ -7,8 +7,8 @@ summarizing the most common user subjects. However, such approaches fail to impr
 user feedback and the amount of contextual information included. This chatbot prototype uses Rasa Open Source to elicit
 contextual information by interacting with users during a conversation.
 
-####Important Note
-The chatbot was developed for a german streaming application. Therefore it currently only supports
+
+> The chatbot was developed for a german streaming application. Therefore it currently only supports
 conversations in german.
 
 ## 👷‍ Installation
