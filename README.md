@@ -72,7 +72,7 @@ services to see the full functionality.
 In our development environment the elastic stack is hidden behind a proxy. To use your own elastic stack either follow
 the same approach or review and change `actions/elastic/` to match your requirements. This is WIP.
 
-We save our incident reports using Airtable. To connect to airtable review their documentation
+We save our incident reports using Airtable. To connect to airtable review their [documentation](https://airtable.com/api)
 and `actions/util/create_incident_report`. The incident table used needs to include all fields of `create_incident_report`.
 
 ```
